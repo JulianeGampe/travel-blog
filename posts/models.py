@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from tinymce import models as tinymce_models
 
 
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -16,7 +17,7 @@ class Post(models.Model):
     image = CloudinaryField('image', default='placeholder')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now_add=True)
-    content = models.TextField()
+    content = tinymce_models.HTMLField()
     likes = models.ManyToManyField(
         User, related_name='blogpost_like', blank=True
     )
