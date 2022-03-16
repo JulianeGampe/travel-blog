@@ -9,5 +9,5 @@ from .models import Post
 #     template_name = 'posts.html'
 #     paginate_by = 3
 def posts(request):
-    return render(request, 'posts.html')
+    return render(request, 'posts/posts.html')
     
