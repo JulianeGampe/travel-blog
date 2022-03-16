@@ -20,5 +20,6 @@ from posts import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('tinymce/', include('tinymce.urls')),
-    path('posts/', views.posts, name='posts')
+    path('posts/', views.posts, name='posts'),
+    path('accounts/', include('allauth.urls'))
 ]
