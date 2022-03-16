@@ -2,6 +2,19 @@
 
 {% block content %}
 
-<h1>This is a test heading for the posts</h1>
+    <h1>This is a test heading for the posts</h1>
+    <p>test paragraph</p>
+    
+    <table>
+    {% for post in posts %}
+        <tr><td>Title: {{ post.title }}</td></tr>
+        <tr><td>Author: {{ post.author }}</td></tr>
+        <tr><td>Image: {{ post.image }}</td></tr>
+        <tr><td>Content: {{ post.content }}</td></tr>
+        <tr><td>Created: {{ post.created }}</td></tr>
+        <tr><td>Updated: {{ post.updated }}</td></tr>
+        <tr><td>Likes: {{ post.likes }}</td></tr>  
+    {% endfor %}
+    </table>
 
 {% endblock content %}
