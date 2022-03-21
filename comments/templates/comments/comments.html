@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <h1>This is a test heading from the comments.html</h1>
+
+    <p>{{ post.title }}</p>
+    <p>{{ post.content }}</p>
+
+    {% for comment in post.comments.all %}
+        <p>{{ comment.name }}</p>
+        <p>{{ comment.body }}</p>
+
+    
+    {% empty %}
+        <p>No comments yet</p>
+    {% endfor %}
+
+    {% if user.is_authenticated %}
+    <h3>Leave comment</h3>
+    <p>Posting as: {{ user.username }}</p>
+
+    
+    <!-- <form method="POST">
+        {% csrf_token %}
+            {% crispy form %}
+            {{form|crispy}}
+            <button class="button btn-signup btn-lg" type="submit">Submit</button>
+    </form> -->
+
+    {% endif %}
+
+    {% endblock content %}
