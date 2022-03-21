@@ -7,13 +7,16 @@
     
     <table>
     {% for post in posts %}
-        <tr><td>Title: {{ post.title }}</td></tr>
-        <tr><td>Author: {{ post.author }}</td></tr>
-        <tr><td>Image: {{ post.image }}</td></tr>
-        <tr><td>Content: {{ post.content }}</td></tr>
+        <p>Author: {{ post.author }}</p>
+        <a href="{% url 'comments' post.slug %}">
+            
+            <p>Title: {{ post.title }}</p>
+            
+        </a>
+        <!-- <tr><td>Content: {{ post.content }}</td></tr>
         <tr><td>Created: {{ post.created }}</td></tr>
-        <tr><td>Updated: {{ post.updated }}</td></tr>
-        <tr><td>Likes: {{ post.likes }}</td></tr>  
+        <tr><td>Updated: {{ post.updated }}</td></tr> -->
+        <p>Likes: {{ post.likes }}</p>  
     {% endfor %}
     </table>
 
