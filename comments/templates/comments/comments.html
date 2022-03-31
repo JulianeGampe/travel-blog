@@ -22,12 +22,11 @@
     <p>Posting as: {{ user.username }}</p>
 
     
-    <!-- <form method="POST">
+    <form method="POST">
         {% csrf_token %}
-            {% crispy form %}
-            {{form|crispy}}
-            <button class="button btn-signup btn-lg" type="submit">Submit</button>
-    </form> -->
+        {{form|crispy}}
+        <button class="button btn-signup btn-lg" type="submit">Submit</button>
+    </form>
 
     {% endif %}
 
