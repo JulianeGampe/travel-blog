@@ -13,19 +13,20 @@ def posts(request):
 
 def comments(request, slug):
     post = Post.objects.get(slug=slug)
+    comments = post.comments.filter(approved=True).order_by("-created")
+    new_comment = None
 
     if request.method == 'POST':
         form = CommentForm(request.POST)
 
         if form.is_valid():
-            comment = form.save(commit=False)
-            comment.post = post 
-            comment.save()
+            new_comment = form.save(commit=False)
+            new_comment.post = post 
+            new_comment.save()
 
-            return redirect('comments', slug=post.slug)
     else:
         form = CommentForm()
   
     return render(
-        request, 'comments/comments.html', {'post': post, 'form': form}
+        request, 'comments/comments.html', {'post': post, 'comments': comments, 'new_comment': new_comment, 'form': form}
         )
