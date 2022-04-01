@@ -8,7 +8,7 @@
     <p>{{ post.title }}</p>
     <p>{{ post.content }}</p>
 
-    {% for comment in post.comments.all %}
+    {% for comment in comments %}
         <p>{{ comment.name }}</p>
         <p>{{ comment.body }}</p>
 
@@ -17,7 +17,11 @@
         <p>No comments yet</p>
     {% endfor %}
 
+    
     {% if user.is_authenticated %}
+    {% if new_comment %}
+    <div>Your comment is awaiting approval</div>
+    {% else %}
     <h3>Leave comment</h3>
     <p>Posting as: {{ user.username }}</p>
 
@@ -28,6 +32,7 @@
         <button class="button btn-signup btn-lg" type="submit">Submit</button>
     </form>
 
+    {% endif %}
     {% endif %}
 
     {% endblock content %}
