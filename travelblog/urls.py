@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from posts.views import posts, comments
+from posts.views import posts, comments, likes
 
 # from comments import views
 
@@ -24,5 +24,6 @@ urlpatterns = [
     path('tinymce/', include('tinymce.urls')),
     path('posts/', posts, name='posts'),
     path('<slug:slug>/', comments, name='comments'),
+    path('like/<slug:slug>', likes, name='likes'),
     path('accounts/', include('allauth.urls'))
 ]
