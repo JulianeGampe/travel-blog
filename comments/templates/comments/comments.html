@@ -7,6 +7,26 @@
 
     <p>{{ post.title }}</p>
     <p>{{ post.content }}</p>
+    <p>Likes: {{ post.number_of_likes }}</p>
+
+    {% if user.is_authenticated %} 
+    <form action="{% url 'likes' post.slug %}" method="POST">
+        {% csrf_token %}
+        {% if liked %}
+
+        <button type="submit" value="{{post.slug}}" class="btn-like">Unlike</button>
+
+        {% else %}
+
+        <button type="submit" value="{{post.slug}}" class="btn-like">Like Me</button>
+
+        {% endif %}
+
+    </form>
+    {% else %}
+    <span></span>
+    {% endif %}
+
 
     {% for comment in comments %}
         <p>{{ comment.name }}</p>
@@ -19,6 +39,7 @@
 
     
     {% if user.is_authenticated %}
+
     {% if new_comment %}
     <div>Your comment is awaiting approval</div>
     {% else %}
