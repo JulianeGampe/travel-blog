@@ -16,7 +16,9 @@ def comments(request, slug):
     post = Post.objects.get(slug=slug)
     comments = post.comments.filter(approved=True).order_by("-created")
     new_comment = None
-
+    liked = False
+    if post.likes.filter(id=request.user.id).exists():
+        liked = True
 
     if request.method == 'POST':
         form = CommentForm(request.POST)
@@ -36,7 +38,8 @@ def comments(request, slug):
             'post': post, 
             'comments': comments, 
             'new_comment': new_comment, 
-            'form': form
+            'form': form,
+            'liked': liked
         }
     )
 
