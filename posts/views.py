@@ -26,6 +26,7 @@ def comments(request, slug):
 
         if form.is_valid():
             new_comment = form.save(commit=False)
+            new_comment.name = request.user
             new_comment.post = post 
             new_comment.save()
 
