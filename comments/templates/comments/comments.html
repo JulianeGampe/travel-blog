@@ -32,6 +32,12 @@
         <p>{{ comment.name }}</p>
         <p>{{ comment.body }}</p>
 
+        {% if user.is_authenticated %}
+        {% if user.username == comment.name %}
+            <div><a href="/delete/{{ comment.id }}"><button>Delete</button></a></div>
+        {% endif %}
+        {% endif %}
+
     
     {% empty %}
         <p>No comments yet</p>
