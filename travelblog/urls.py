@@ -25,6 +25,6 @@ urlpatterns = [
     path('posts/', posts, name='posts'),
     path('<slug:slug>/', comments, name='comments'),
     path('like/<slug:slug>', likes, name='likes'),
-    path('delete/<comment_id>', delete_comment, name='delete'),
+    path('delete/<comment_id>/', delete_comment, name='delete'),
     path('accounts/', include('allauth.urls'))
 ]
