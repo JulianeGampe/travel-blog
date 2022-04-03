@@ -18,6 +18,7 @@ from django.urls import path, include
 from posts.views import posts, comments, likes, delete_comment
 from home.views import home
 from aboutme.views import aboutme
+from contact.views import contact
 
 # from comments import views
 
@@ -31,4 +32,5 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', home, name='home'),
     path('aboutme.html', aboutme, name='aboutme'),
+    path('contact.html', contact, name='contact'),
 ]
