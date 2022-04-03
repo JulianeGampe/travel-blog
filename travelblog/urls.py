@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from posts.views import posts, comments, likes, delete_comment
 from home.views import home
+from aboutme.views import aboutme
 
 # from comments import views
 
@@ -28,5 +29,6 @@ urlpatterns = [
     path('like/<slug:slug>', likes, name='likes'),
     path('delete/<comment_id>/', delete_comment, name='delete'),
     path('accounts/', include('allauth.urls')),
-    path('', home, name='home')
+    path('', home, name='home'),
+    path('aboutme.html', aboutme, name='aboutme'),
 ]
