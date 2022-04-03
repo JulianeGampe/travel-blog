@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'posts',
     'comments',
     'profile',
+    'home',
 ]
 
 SITE_ID = 1
