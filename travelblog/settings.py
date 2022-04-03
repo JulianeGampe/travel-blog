@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'profile',
     'home',
     'aboutme',
+    'contact',
 ]
 
 SITE_ID = 1
