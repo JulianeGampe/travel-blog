@@ -11,3 +11,16 @@ def posts(request):
         'posts': posts
     }
     return render(request, 'posts/posts.html', context)
+
+
+def likes(request,slug):
+    post = Post.objects.get(slug=slug)
+
+    if post.likes.filter(id=request.user.id).exists():
+        post.likes.remove(request.user)
+
+    else:
+        post.likes.add(request.user)
+
+    return HttpResponseRedirect(reverse('comments', args=[slug]))
+    
