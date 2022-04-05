@@ -38,6 +38,19 @@ def comments(request, slug):
     )
 
 
+def edit_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
+    edited_comment = None
+    if request.method == 'POST':
+        edit_form = CommentForm(request.POST, instance=comment)
+        if edit_form.is_valid():
+            edited_comment = edit_form.save(commit=False)
+            edited_comment.approved = False
+            edited_comment.save()
+    edit_form = CommentForm(instance=comment)
+    return render(request, "comments/comments_edit.html", {'edit_form': edit_form, 'edited_comment': edited_comment})
+
+
 def delete_comment(request, comment_id):
     comment = get_object_or_404(Comment, id=comment_id)
 
