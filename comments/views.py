@@ -38,18 +38,6 @@ def comments(request, slug):
     )
 
 
-def likes(request,slug):
-    post = Post.objects.get(slug=slug)
-
-    if post.likes.filter(id=request.user.id).exists():
-        post.likes.remove(request.user)
-
-    else:
-        post.likes.add(request.user)
-
-    return HttpResponseRedirect(reverse('comments', args=[slug]))
-
-
 def delete_comment(request, comment_id):
     comment = get_object_or_404(Comment, id=comment_id)
 
