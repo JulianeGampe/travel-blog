@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from posts.views import posts, likes
-from comments.views import comments, delete_comment
+from comments.views import comments, delete_comment, edit_comment
 from home.views import home
 from aboutme.views import aboutme
 from contact.views import contact
@@ -28,6 +28,7 @@ urlpatterns = [
     path('posts/', posts, name='posts'),
     path('<slug:slug>/', comments, name='comments'),
     path('like/<slug:slug>', likes, name='likes'),
+    path('edit/<comment_id>/', edit_comment, name='edit'),
     path('delete/<comment_id>/', delete_comment, name='delete'),
     path('accounts/', include('allauth.urls')),
     path('', home, name='home'),
