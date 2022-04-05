@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+{% if edited_comment %}
+    <div>Your comment is awaiting approval</div>
+{% else %}
+<form action="." method="POST">
+    {% csrf_token %}
+    <h3>Please edit your comment here:</h3>
+    <form method="POST">
+        {% csrf_token %}
+        {{edit_form|crispy}}
+        <button class="button btn-signup btn-lg" type="submit">Edit Comment</button>
+        <a href="{% url 'posts' %}">Cancel</a></p>
+    </form>
+</form>
+{% endif %}
+
+
+{% endblock content %}
