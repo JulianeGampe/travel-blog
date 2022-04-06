@@ -24,3 +24,11 @@ def likes(request,slug):
 
     return HttpResponseRedirect(reverse('comments', args=[slug]))
     
+
+def delete_post(request, post_id):
+    posts_delete = get_object_or_404(Post, id=post_id)
+
+    if request.method == "POST":
+        posts_delete.delete()
+        return redirect('posts')
+    return render(request, "posts/posts_delete.html", {'posts_delete': posts_delete})
