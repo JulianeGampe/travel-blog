@@ -32,4 +32,11 @@ def profile(request):
         }
     )
 
-  
+
+def approve(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
+
+    if request.method == "POST":
+        comment.approved = True
+        return redirect('profile')
+    return render(request, "profile/approve.html", {'comment': comment})
