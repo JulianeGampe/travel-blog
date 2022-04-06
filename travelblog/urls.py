@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from posts.views import posts, likes, delete_post
+from posts.views import posts, likes, delete_post, edit_post
 from comments.views import comments, delete_comment, edit_comment
 from home.views import home
 from aboutme.views import aboutme
@@ -38,4 +38,5 @@ urlpatterns = [
     path('profile.html', profile, name='profile'),
     path('approve/<comment_id>/', approve, name='approve'),
     path('posts_delete/<post_id>/', delete_post, name='delete_post'),
+    path('posts_edit/<post_id>/', edit_post, name='edit_post'),
 ]
