@@ -20,6 +20,7 @@ from comments.views import comments, delete_comment, edit_comment
 from home.views import home
 from aboutme.views import aboutme
 from contact.views import contact
+from profile.views import profile, approve
 
 
 urlpatterns = [
@@ -34,4 +35,6 @@ urlpatterns = [
     path('', home, name='home'),
     path('aboutme.html', aboutme, name='aboutme'),
     path('contact.html', contact, name='contact'),
+    path('profile.html', profile, name='profile'),
+    
 ]
