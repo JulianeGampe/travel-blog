@@ -22,6 +22,7 @@
         <p>Updated: {{ post.updated }}</p>
         <p>Likes: {{ post.number_of_likes }}</p>  
         {% if request.user.is_authenticated and request.user.is_superuser %}
+        <div><a href="/posts_edit/{{ post.id }}"><button>Edit Post</button></a></div>
         <div><a href="/posts_delete/{{ post.id }}"><button>Delete Post</button></a></div>
         {% endif %}
     {% endfor %}
