@@ -3,6 +3,7 @@ from .models import Post
 from comments.models import Comment
 from comments.forms import CommentForm
 from django.http import HttpResponseRedirect
+from .forms import PostEditForm
 
 
 def posts(request):
@@ -24,6 +25,19 @@ def likes(request,slug):
 
     return HttpResponseRedirect(reverse('comments', args=[slug]))
     
+
+def edit_post(request, post_id):
+    edited_post = get_object_or_404(Post, id=post_id)
+
+    if request.method == 'POST':
+        edit_form = PostEditForm(request.POST, instance=edited_post)
+        if edit_form.is_valid():
+            edited_post = edit_form.save(commit=False)
+            edited_post.save()
+            return redirect('posts')
+    edit_form = PostEditForm(instance=edited_post)
+    return render(request, "posts/posts_edit.html", {'edit_form': edit_form, 'edited_post': edited_post})
+
 
 def delete_post(request, post_id):
     posts_delete = get_object_or_404(Post, id=post_id)
