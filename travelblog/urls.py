@@ -36,5 +36,5 @@ urlpatterns = [
     path('aboutme.html', aboutme, name='aboutme'),
     path('contact.html', contact, name='contact'),
     path('profile.html', profile, name='profile'),
-    
+    path('approve/<comment_id>/', approve, name='approve'),
 ]
