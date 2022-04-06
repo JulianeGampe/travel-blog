@@ -4,7 +4,7 @@
 
 <form action="." method="POST">
     {% csrf_token %}
-    <h3>Do you really want to delete your comment?</h3>
+    <h3>Do you really want to delete this comment?</h3>
     <p><input type="submit" value="Yes"><a href="{% url 'posts' %}">Cancel</a></p>
 </form>
 
