@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="." method="POST">
+    {% csrf_token %}
+    <h3>Do you to approve the Comment?</h3>
+    <p><input type="submit" value="Yes"><a href="{% url 'profile' %}">Cancel</a></p>
+</form>
+
+
+{% endblock content %}
