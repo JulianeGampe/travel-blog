@@ -7,6 +7,13 @@
 
     <p>{{ post.title }}</p>
     <p>{{ post.content }}</p>
+    {% if 'placeholder' in post.image.url %}
+        <img src="https://res.cloudinary.com/dj9mjerfb/image/upload/v1649244724/placeholder_rw8acz.jpg" alt="Placeholder Image" style="width: 500px;">
+        {% else %}
+        <img src="{{ post.image.url }}" style="width: 500px;" alt="image for the post">
+        {% endif %}
+    <p>Created: {{ post.created }}</p>
+    <p>Updated: {{ post.updated }}</p>
     <p>Likes: {{ post.number_of_likes }}</p>
 
     {% if user.is_authenticated %} 
