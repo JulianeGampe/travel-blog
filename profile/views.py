@@ -38,5 +38,6 @@ def approve(request, comment_id):
 
     if request.method == "POST":
         comment.approved = True
+        comment.save()
         return redirect('profile')
     return render(request, "profile/approve.html", {'comment': comment})
