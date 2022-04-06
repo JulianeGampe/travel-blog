@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+<form action="." method="POST">
+    {% csrf_token %}
+    <h3>Please edit your post here:</h3>
+    <form method="POST">
+        {% csrf_token %}
+        {{edit_form|crispy}}
+        <button class="button btn-signup btn-lg" type="submit">Edit Post</button>
+        <a href="{% url 'posts' %}">Cancel</a></p>
+    </form>
+</form>
+
+{% endblock content %}
