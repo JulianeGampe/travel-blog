@@ -5,5 +5,5 @@ from django import forms
 class PostEditForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ('title', 'slug', 'image', 'content',)
+        fields = ('title', 'slug', 'status', 'image', 'content',)
         
