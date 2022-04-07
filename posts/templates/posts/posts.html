@@ -6,13 +6,27 @@
     <p>test paragraph</p>
     
     <table>
+    {% if request.user.is_authenticated and request.user.is_superuser %}
+        <h3>My drafts:</h3>
+        {% for post in posts %}
+            {% if post.status == 0 %}
+                <p>Draft Titel: {{ post.title }}</p>
+                <p>Draft Created: {{ post.created }}</p>
+                <div><a href="/posts_edit/{{ post.id }}"><button>Edit Draft</button></a></div>
+                <div><a href="/posts_delete/{{ post.id }}"><button>Delete Draft</button></a></div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    <br>
+    <br>
     {% for post in posts %}
-        <p>Author: {{ post.author }}</p>
+        {% if post.status == 1 %}
         <a href="{% url 'comments' post.slug %}">
             
             <p>Title: {{ post.title }}</p>
             
         </a>
+        <p>Author: {{ post.author }}</p>
         {% if 'placeholder' in post.image.url %}
         <img src="https://res.cloudinary.com/dj9mjerfb/image/upload/v1649244724/placeholder_rw8acz.jpg" alt="Placeholder Image" style="width: 200px;">
         {% else %}
@@ -24,6 +38,7 @@
         {% if request.user.is_authenticated and request.user.is_superuser %}
         <div><a href="/posts_edit/{{ post.id }}"><button>Edit Post</button></a></div>
         <div><a href="/posts_delete/{{ post.id }}"><button>Delete Post</button></a></div>
+        {% endif %}
         {% endif %}
     {% endfor %}
     </table>
