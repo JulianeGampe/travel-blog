@@ -4,6 +4,7 @@ from comments.models import Comment
 from comments.forms import CommentForm
 from django.http import HttpResponseRedirect
 from .forms import PostEditForm
+from datetime import datetime
 
 
 def posts(request):
@@ -32,6 +33,7 @@ def edit_post(request, post_id):
     if request.method == 'POST':
         edit_form = PostEditForm(request.POST, instance=edited_post)
         if edit_form.is_valid():
+            edited_post.updated = datetime.now()
             edited_post = edit_form.save(commit=False)
             edited_post.save()
             return redirect('posts')
