@@ -11,7 +11,6 @@ def profile(request):
 
         if post_form.is_valid():
             post_form = post_form.save(commit=False)
-            post_form.status = 1
             post_form.author = request.user
             post_form.profile = profile
             post_form.save()
