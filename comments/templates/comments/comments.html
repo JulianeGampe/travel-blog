@@ -41,8 +41,8 @@
 
         {% if user.is_authenticated %}
         {% if user.username == comment.name %}
-            <div><a href="/edit/{{ comment.id }}"><button>Edit Comment</button></a></div>
-            <div><a href="/delete/{{ comment.id }}"><button>Delete</button></a></div>
+            <div><a href="{% url 'edit' comment.id %}"><button>Edit Comment</button></a></div>
+            <div><a href="{% url 'delete' comment.id %}"><button>Delete</button></a></div>
         {% endif %}
         {% endif %}
 
