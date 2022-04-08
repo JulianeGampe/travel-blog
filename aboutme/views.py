@@ -1,5 +1,9 @@
 from django.shortcuts import render
 
+
 # Create your views here.
 def aboutme(request):
-    return render(request, 'aboutme/aboutme.html', {'aboutme': aboutme})
+    template = 'aboutme/aboutme.html'
+    context = {
+    }
+    return render(request, template, context)
