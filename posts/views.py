@@ -16,7 +16,7 @@ def posts(request):
     return render(request, template, context)
 
 
-def likes(request,slug):
+def likes(request, slug):
     post = Post.objects.get(slug=slug)
 
     if post.likes.filter(id=request.user.id).exists():
@@ -26,7 +26,7 @@ def likes(request,slug):
         post.likes.add(request.user)
 
     return HttpResponseRedirect(reverse('comments', args=[slug]))
-    
+
 
 def edit_post(request, post_id):
     edited_post = get_object_or_404(Post, id=post_id)
