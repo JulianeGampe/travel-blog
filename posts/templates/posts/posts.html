@@ -12,8 +12,8 @@
             {% if post.status == 0 %}
                 <p>Draft Titel: {{ post.title }}</p>
                 <p>Draft Created: {{ post.created }}</p>
-                <div><a href="/posts_edit/{{ post.id }}"><button>Edit Draft</button></a></div>
-                <div><a href="/posts_delete/{{ post.id }}"><button>Delete Draft</button></a></div>
+                <div><a href="{% url 'edit_post' post.id %}" class="btn btn-primary">Edit Draft</a></div>
+                <div><a href="{% url 'delete_post' post.id %}" class="btn btn-primary">Delete Draft</a></div>
             {% endif %}
         {% endfor %}
     {% endif %}
@@ -36,8 +36,8 @@
         <p>Updated: {{ post.updated }}</p>
         <p>Likes: {{ post.number_of_likes }}</p>  
         {% if request.user.is_authenticated and request.user.is_superuser %}
-        <div><a href="/posts_edit/{{ post.id }}"><button>Edit Post</button></a></div>
-        <div><a href="/posts_delete/{{ post.id }}"><button>Delete Post</button></a></div>
+        <div><a href="{% url 'edit_post' post.id %}" class="btn btn-primary">Edit Post</a></div>
+        <div><a href="{% url 'delete_post' post.id %}" class="btn btn-primary">Delete Post</a></div>
         {% endif %}
         {% endif %}
     {% endfor %}
