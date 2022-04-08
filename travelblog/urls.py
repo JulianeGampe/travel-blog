@@ -26,14 +26,11 @@ from profile.views import profile, approve
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('tinymce/', include('tinymce.urls')),
-    path('posts/', posts, name='posts'),
+    path('posts/', include('posts.urls')),
     path('comments/', include('comments.urls')),
-    path('like/<slug:slug>', likes, name='likes'),
     path('accounts/', include('allauth.urls')),
     path('', home, name='home'),
     path('aboutme/', include('aboutme.urls')),
     path('contact/', include('contact.urls')),
     path('profile/', include('profile.urls')),
-    path('posts_delete/<post_id>/', delete_post, name='delete_post'),
-    path('posts_edit/<post_id>/', edit_post, name='edit_post'),
 ]
