@@ -9,10 +9,11 @@ from datetime import datetime
 
 def posts(request):
     posts = Post.objects.all()
+    template = 'posts/posts.html'
     context = {
         'posts': posts
     }
-    return render(request, 'posts/posts.html', context)
+    return render(request, template, context)
 
 
 def likes(request,slug):
@@ -29,6 +30,7 @@ def likes(request,slug):
 
 def edit_post(request, post_id):
     edited_post = get_object_or_404(Post, id=post_id)
+    template = "posts/posts_edit.html"
 
     if request.method == 'POST':
         edit_form = PostEditForm(request.POST, instance=edited_post)
@@ -38,13 +40,22 @@ def edit_post(request, post_id):
             edited_post.save()
             return redirect('posts')
     edit_form = PostEditForm(instance=edited_post)
-    return render(request, "posts/posts_edit.html", {'edit_form': edit_form, 'edited_post': edited_post})
+
+    context = {
+        'edit_form': edit_form,
+        'edited_post': edited_post
+    }
+    return render(request, template, context)
 
 
 def delete_post(request, post_id):
     posts_delete = get_object_or_404(Post, id=post_id)
+    template = "posts/posts_delete.html"
+    context = {
+        'posts_delete': posts_delete
+    }
 
     if request.method == "POST":
         posts_delete.delete()
         return redirect('posts')
-    return render(request, "posts/posts_delete.html", {'posts_delete': posts_delete})
+    return render(request, template, context)
