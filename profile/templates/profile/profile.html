@@ -25,10 +25,9 @@
         <p>{{ comment.created }}</p>
         <p>{{ comment.approved }}</p>
         {% if comment.approved == False %}
-        <div><a href="/approve/{{ comment.id }}"><button>Approve Comment</button></a></div>
+        <div><a href="{% url 'approve' comment.id %}"><button>Approve Comment</button></a></div>
         {% endif %}
-        <div><a href="/delete/{{ comment.id }}"><button>Delete</button></a></div>
-        
+        <div><a href="{% url 'delete' comment.id %}"><button>Delete</button></a></div>
 
     {% endfor %}
 
