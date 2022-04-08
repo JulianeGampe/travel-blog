@@ -19,23 +19,21 @@ def comments(request, slug):
         if form.is_valid():
             new_comment = form.save(commit=False)
             new_comment.name = request.user
-            new_comment.post = post 
+            new_comment.post = post
             new_comment.save()
 
     else:
         form = CommentForm()
-  
-    return render(
-        request, 
-        'comments/comments.html', 
-        {
-            'post': post, 
-            'comments': comments, 
-            'new_comment': new_comment, 
-            'form': form,
-            'liked': liked
-        }
-    )
+
+    template = 'comments/comments.html'
+    context = {
+        'post': post,
+        'comments': comments,
+        'new_comment': new_comment,
+        'form': form,
+        'liked': liked
+    }
+    return render(request, template, context)
 
 
 def edit_comment(request, comment_id):
@@ -48,13 +46,22 @@ def edit_comment(request, comment_id):
             edited_comment.approved = False
             edited_comment.save()
     edit_form = CommentForm(instance=comment)
-    return render(request, "comments/comments_edit.html", {'edit_form': edit_form, 'edited_comment': edited_comment})
+    template = "comments/comments_edit.html"
+    context = {
+        'edit_form': edit_form,
+        'edited_comment': edited_comment
+    }
+    return render(request, template, context)
 
 
 def delete_comment(request, comment_id):
     comment = get_object_or_404(Comment, id=comment_id)
+    template = "comments/comments_delete.html"
+    context = {
+        'comment': comment
+    }
 
     if request.method == "POST":
         comment.delete()
         return redirect('posts')
-    return render(request, "comments/comments_delete.html", {'comment': comment})
+    return render(request, template, context)
