@@ -2,37 +2,42 @@
 
 {% block content %}
 
-    <h1>This is a test heading for the posts</h1>
-    <p>test paragraph</p>
+<h1>This is a test heading for the posts</h1>
+<p>test paragraph</p>
     
-    <table>
+<table>
     {% if request.user.is_superuser %}
-    <h3>My drafts:</h3>
+        <h3>My drafts:</h3>
+        {% for post in posts %}
+            {% if post.status == 0 %}
+                <p>Draft Titel: {{ post.title }}</p>
+                <p>Draft Created: {{ post.created }}</p>
+                <div><a href="{% url 'edit_post' post.id %}" class="btn btn-primary">Edit Draft</a></div>
+                <div><a href="{% url 'delete_post' post.id %}" class="btn btn-primary">Delete Draft</a></div>
+            {% endif %}
+        {% endfor %}
     {% endif %}
+    <br>
+    <br>
     {% for post in posts %}
-        {% if request.user.is_superuser and post.status == 0 %}
-            <p>Draft Title: {{ post.title }}</p>
-            <p>Draft Created: {{ post.created }}</p>
-            <div><a href="{% url 'edit_post' post.id %}" class="btn btn-primary">Edit Draft</a></div>
-            <div><a href="{% url 'delete_post' post.id %}" class="btn btn-primary">Delete Draft</a></div>
-        {% elif post.status == 1 %}
-            <a href="{% url 'comments' post.slug %}">
-                <p>Title: {{ post.title }}</p>
-            </a>
-            <p>Author: {{ post.author }}</p>
-            {% if 'placeholder' in post.image.url %}
-            <img src="https://res.cloudinary.com/dj9mjerfb/image/upload/v1649244724/placeholder_rw8acz.jpg" alt="Placeholder Image" style="width: 200px;">
-            {% else %}
-            <img src="{{ post.image.url }}" style="width: 200px;" alt="image for the post">
-            {% endif %}
-            <p>Created: {{ post.created }}</p>
-            <p>Updated: {{ post.updated }}</p>
-            <p>Likes: {{ post.number_of_likes }}</p>  
-            {% if request.user.is_authenticated and request.user.is_superuser %}
-            <div><a href="{% url 'edit_post' post.id %}" class="btn btn-primary">Edit Post</a></div>
-            <div><a href="{% url 'delete_post' post.id %}" class="btn btn-primary">Delete Post</a></div>
-            {% endif %}
+        {% if post.status == 1 %}
+        <a href="{% url 'comments' post.slug %}">
+            <p>Title: {{ post.title }}</p>
+        </a>
+        <p>Author: {{ post.author }}</p>
+        {% if 'placeholder' in post.image.url %}
+        <img src="https://res.cloudinary.com/dj9mjerfb/image/upload/v1649244724/placeholder_rw8acz.jpg" alt="Placeholder Image" style="width: 200px;">
+        {% else %}
+        <img src="{{ post.image.url }}" style="width: 200px;" alt="image for the post">
+        {% endif %}
+        <p>Created: {{ post.created }}</p>
+        <p>Updated: {{ post.updated }}</p>
+        <p>Likes: {{ post.number_of_likes }}</p>  
+        {% if request.user.is_superuser %}
+        <div><a href="{% url 'edit_post' post.id %}" class="btn btn-primary">Edit Post</a></div>
+        <div><a href="{% url 'delete_post' post.id %}" class="btn btn-primary">Delete Post</a></div>
+        {% endif %}
         {% endif %}
     {% endfor %}
-    </table>
+</table>
 {% endblock content %}
