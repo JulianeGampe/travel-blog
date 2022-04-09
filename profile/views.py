@@ -15,7 +15,7 @@ def profile(request):
             post_form.profile = profile
             post_form.save()
 
-            return redirect('/')
+            return redirect('posts')
 
     else:
         post_form = PostForm()
