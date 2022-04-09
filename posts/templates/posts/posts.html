@@ -8,19 +8,14 @@
 <table>
     {% if request.user.is_superuser %}
         <h3>My drafts:</h3>
-        {% for post in posts %}
-            {% if post.status == 0 %}
-                <p>Draft Titel: {{ post.title }}</p>
-                <p>Draft Created: {{ post.created }}</p>
-                <div><a href="{% url 'edit_post' post.id %}" class="btn btn-primary">Edit Draft</a></div>
-                <div><a href="{% url 'delete_post' post.id %}" class="btn btn-primary">Delete Draft</a></div>
-            {% endif %}
-        {% endfor %}
     {% endif %}
-    <br>
-    <br>
-    {% for post in posts %}
-        {% if post.status == 1 %}
+    {% for post in posts|dictsort:"status" %}
+    {% if request.user.is_superuser and post.status == 0 %}
+        <p>Draft Title: {{ post.title }}</p>
+        <p>Draft Created: {{ post.created }}</p>
+        <div><a href="{% url 'edit_post' post.id %}" class="btn btn-primary">Edit Draft</a></div>
+        <div><a href="{% url 'delete_post' post.id %}" class="btn btn-primary">Delete Draft</a></div>
+    {% elif post.status == 1 %}
         <a href="{% url 'comments' post.slug %}">
             <p>Title: {{ post.title }}</p>
         </a>
@@ -33,11 +28,11 @@
         <p>Created: {{ post.created }}</p>
         <p>Updated: {{ post.updated }}</p>
         <p>Likes: {{ post.number_of_likes }}</p>  
-        {% if request.user.is_superuser %}
+        {% if request.user.is_authenticated and request.user.is_superuser %}
         <div><a href="{% url 'edit_post' post.id %}" class="btn btn-primary">Edit Post</a></div>
         <div><a href="{% url 'delete_post' post.id %}" class="btn btn-primary">Delete Post</a></div>
         {% endif %}
-        {% endif %}
+    {% endif %}
     {% endfor %}
 </table>
 {% endblock content %}
