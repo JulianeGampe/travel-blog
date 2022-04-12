@@ -2,10 +2,28 @@
 
 {% block content %}
 
-    <h1>Welcome to my Travel Blog!</h1>
-    <p>I travel around the world, sharing my experiences with you.</p>
-    <p>Read my blog <a href="{% url 'posts' %}">here</a> and follow me along the road</p>
-    <p>Leave me a comment to let me know what you think or add your recommendations or requests for places you would like me to visit.</p>
-    <div><img src="https://res.cloudinary.com/dj9mjerfb/image/upload/v1649575200/homepage_iqbinf.jpg" alt="Picture of Pompeii" style="width: 300px"></div>
+<div id="backgroundimage">
+    <div class="container" id="homecontainer"></div>
+        <div class="row" id="homerow">
+            <div class="col-sm-8 mt-3 offset-sm-3">
+                <div class="card opacity-75" id="homecard">
+                    <div class="card-body">
+                        <h5 class="card-title" id="homecardtitle">Welcome to my Travel Blog!</h5>
+                        <h6 class="card-subtitle mb-2 text-muted" id="homecardsubtitle">
+                            I travel around the world, sharing my experiences with you.
+                        </h6>
+                        <p class="card-text" id="homecardtext">
+                            Read my blog and follow me along the road. Leave me a comment to let me 
+                            know what you think or add your recommendations or requests for 
+                            places you would like me to visit.
+                        </p>
+                        <a href="{% url 'posts' %}" class="card-link" id="homecardlink">My blog</a>
+                        <a href="{%url 'aboutme' %}" class="card-link" id="homecardlink">About me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock content %}
