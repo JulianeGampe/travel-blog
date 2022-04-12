@@ -1,3 +1,52 @@
 body {
     padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+
+/* homepage styling */
+#backgroundimage {
+    background: url(https://res.cloudinary.com/dj9mjerfb/image/upload/v1649575200/homepage_iqbinf.jpg) no-repeat center center fixed;
+	background-size: cover;
+    height: 100vh;
+}
+
+#homecontainer {
+    position: relative;
+}
+
+#homerow {
+    position: fixed; 
+    top: 15%; 
+    left: 5%;
+}
+
+#homecard {
+    width: 270px;
+}
+
+#homecardtitle,
+#homecardsubtitle,
+#homecardtext,
+#homecardlink {
+    color: rgba(0, 0, 0, 1);
+    font-weight: 800;
+}
+
+@media screen and (min-width: 576px) {
+    body {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    /* homepage styling for min-width 576px */
+    #homerow {
+        position: fixed; 
+        top: 10%; 
+        right: 45%;
+    }
+    
+    #homecard {
+        width: 400px;
+    }
 }
