@@ -71,6 +71,16 @@ body {
     width: 100%;
 }
 
+/* profile page styling */
+.profilecarddetails {
+    font-size: 12px;
+}
+
+.profilecardtext {
+    font-weight: 600;
+}
+
+
 @media screen and (min-width: 576px) {
     body {
         padding-top: 50px;
