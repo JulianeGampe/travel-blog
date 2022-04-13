@@ -3,33 +3,60 @@
 
 {% block content %}
 
-    <h1>This is a test heading from the profile.html</h1>
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-md-8 mt-5 offset-md-2">
+            <div class="card border-5">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h2>Create a new post:</h2>
+                    </div>
+                    <div class="card-text">
+                        {% if request.user.is_authenticated and request.user.is_superuser %}
+                        <form method="POST">
+                            {% csrf_token %}
+                            {{post_form|crispy}}
+                            <button class="button btn-signup btn-md mt-2" type="submit">Submit</button>
+                        </form>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    {% if request.user.is_authenticated and request.user.is_superuser %}
-    <form method="POST">
-        {% csrf_token %}
-        {{post_form|crispy}}
-        <button class="button btn-signup btn-lg" type="submit">Submit</button>
-    </form>
-
-    {% endif %}
-
-    <h2>Approve Comments here:</h2>
-    {% for comment in comments %}
-
-        <p>{{ comment.id }}</p>
-        <p>{{ comment.post }}</p>
-        <p>{{ comment.name }}</p>
-        <p>{{ comment.email }}</p>
-        <p>{{ comment.body }}</p>
-        <p>{{ comment.created }}</p>
-        <p>{{ comment.approved }}</p>
-        {% if comment.approved == False %}
-        <div><a href="{% url 'approve' comment.id %}"><button>Approve Comment</button></a></div>
-        {% endif %}
-        <div><a href="{% url 'delete' comment.id %}"><button>Delete</button></a></div>
-
-    {% endfor %}
-
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-md-8 mt-5 offset-md-2">
+            <div class="card border-5">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h2>Approve Comments here:</h2>
+                    </div>
+                    <div class="card-text">
+                        {% for comment in comments %}
+                        <div class="border border-3 pt-2 pb-2">
+                            <p class="profilecarddetails">
+                                ID: {{ comment.id }} |
+                                For Post: {{ comment.post }} |
+                                <br>
+                                Comment created: {{ comment.created }} |
+                                By: {{ comment.name }} |
+                                {{ comment.email }} 
+                            </p>
+                            <p class="profilecardtext">{{ comment.body }}</p>
+                            {% if comment.approved == False %}
+                            <a href="{% url 'approve' comment.id %}"><button>Approve Comment</button></a>
+                            {% endif %}
+                            <a href="{% url 'delete' comment.id %}"><button>Delete</button></a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock content %}
