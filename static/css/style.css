@@ -7,6 +7,10 @@ body {
     font-weight: 500;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* homepage styling */
 #backgroundimage {
     background: url(https://res.cloudinary.com/dj9mjerfb/image/upload/v1649575200/homepage_iqbinf.jpg) no-repeat center center fixed;
