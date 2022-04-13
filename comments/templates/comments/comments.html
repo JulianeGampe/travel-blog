@@ -88,6 +88,8 @@
                                 <button class="button btn-signup btn-md mt-2" type="submit">Submit</button>
                             </form>
                             {% endif %}
+                        {% else %}
+                            <p class="mt-2">Please <a href="{% url 'account_login' %}">login </a>to leave a comment.</p>
                         {% endif %}
                     </div>
                 </div>
