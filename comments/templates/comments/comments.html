@@ -27,9 +27,9 @@
                         <form action="{% url 'likes' post.slug %}" method="POST">
                             {% csrf_token %}
                             {% if liked %}
-                            <button type="submit" value="{{post.slug}}" class="btn-like">Unlike</button>
+                            <button type="submit" value="{{post.slug}}" class="btn-like"><i class="fas fa-heart hearticon"></i></button>
                             {% else %}
-                            <button type="submit" value="{{post.slug}}" class="btn-like">Like Me</button>
+                            <button type="submit" value="{{post.slug}}" class="btn-like"><i class="far fa-heart hearticon"></i></button>
                             {% endif %}
                         </form>
                         {% else %}
