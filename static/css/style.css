@@ -57,6 +57,15 @@ body {
     text-decoration: none;
 }
 
+/* comments page styling */
+.commentcarddetails {
+    font-size: 12px;
+}
+
+.commentcardimage {
+    width: 100%;
+}
+
 /* about me page styling */
 #aboutmeimage {
     width: 100%;
