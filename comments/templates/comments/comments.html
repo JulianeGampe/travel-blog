@@ -3,71 +3,97 @@
 
 {% block content %}
 
-    <h1>This is a test heading from the comments.html</h1>
-
-    <p>{{ post.title }}</p>
-    <p>{{ post.content }}</p>
-    {% if 'placeholder' in post.image.url %}
-        <img src="https://res.cloudinary.com/dj9mjerfb/image/upload/v1649244724/placeholder_rw8acz.jpg" alt="Placeholder Image" style="width: 500px;">
-        {% else %}
-        <img src="{{ post.image.url }}" style="width: 500px;" alt="image for the post">
-        {% endif %}
-    <p>Created: {{ post.created }}</p>
-    <p>Updated: {{ post.updated }}</p>
-    <p>Likes: {{ post.number_of_likes }}</p>
-
-    {% if user.is_authenticated %} 
-    <form action="{% url 'likes' post.slug %}" method="POST">
-        {% csrf_token %}
-        {% if liked %}
-
-        <button type="submit" value="{{post.slug}}" class="btn-like">Unlike</button>
-
-        {% else %}
-
-        <button type="submit" value="{{post.slug}}" class="btn-like">Like Me</button>
-
-        {% endif %}
-
-    </form>
-    {% else %}
-    <span></span>
-    {% endif %}
-
-
-    {% for comment in comments %}
-        <p>{{ comment.name }}</p>
-        <p>{{ comment.body }}</p>
-
-        {% if user.is_authenticated %}
-        {% if user.username == comment.name %}
-            <div><a href="{% url 'edit' comment.id %}"><button>Edit Comment</button></a></div>
-            <div><a href="{% url 'delete' comment.id %}"><button>Delete</button></a></div>
-        {% endif %}
-        {% endif %}
-
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-md-8 mt-5 offset-md-2">
+            <div class="card border-5">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h2>{{ post.title }}</h2>
+                    </div>
+                    <div class="card-text">
+                        <p>{{ post.content }}</p>
+                        {% if 'placeholder' in post.image.url %}
+                            <img src="https://res.cloudinary.com/dj9mjerfb/image/upload/v1649244724/placeholder_rw8acz.jpg" alt="Placeholder Image" class="commentcardimage">
+                            {% else %}
+                            <img src="{{ post.image.url }}" class="commentcardimage" alt="image for the post">
+                            {% endif %}
+                        <p class="commentcarddetails">
+                            Likes: {{ post.number_of_likes }} |
+                            Created: {{ post.created }} |
+                            Updated: {{ post.updated }} |
+                        </p>
+                        {% if user.is_authenticated %} 
+                        <form action="{% url 'likes' post.slug %}" method="POST">
+                            {% csrf_token %}
+                            {% if liked %}
+                            <button type="submit" value="{{post.slug}}" class="btn-like">Unlike</button>
+                            {% else %}
+                            <button type="submit" value="{{post.slug}}" class="btn-like">Like Me</button>
+                            {% endif %}
+                        </form>
+                        {% else %}
+                        <span></span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     
-    {% empty %}
-        <p>No comments yet</p>
-    {% endfor %}
-
     
-    {% if user.is_authenticated %}
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-md-8 mt-2 offset-md-2">
+            <div class="card border-5">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3>Comments</h3>
+                    </div>
+                    <div class="card-text">
+                        {% for comment in comments %}
+                            <div class="border border-3">
+                            <p class="mt-2">{{ comment.body }}</p>
+                            <p class="commentcarddetails">
+                                By {{ comment.name }} |
+                                {{ comment.created}} |
+                            </p>
+                    
+                            {% if user.is_authenticated %}
+                            {% if user.username == comment.name %}
+                            <div class="mb-2">
+                                <a href="{% url 'edit' comment.id %}"><button>Edit Comment</button></a>
+                                <a href="{% url 'delete' comment.id %}"><button>Delete</button></a>
+                            </div>
+                            {% endif %}
+                            {% endif %}
+                            </div>
+                    
+                        {% empty %}
+                            <p>No comments yet</p>
+                        {% endfor %}
+                    
+                        
+                        {% if user.is_authenticated %}
+                            {% if new_comment %}
+                            <div class="mt-3">Your comment is awaiting approval</div>
 
-    {% if new_comment %}
-    <div>Your comment is awaiting approval</div>
-    {% else %}
-    <h3>Leave comment</h3>
-    <p>Posting as: {{ user.username }}</p>
+                            {% else %}
+                            <h4 class="mt-5">Leave a comment</h4>
+                            <p>Posting as: {{ user.username }}</p>
+                            <form method="POST">
+                                {% csrf_token %}
+                                {{form|crispy}}
+                                <button class="button btn-signup btn-md mt-2" type="submit">Submit</button>
+                            </form>
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    
-    <form method="POST">
-        {% csrf_token %}
-        {{form|crispy}}
-        <button class="button btn-signup btn-lg" type="submit">Submit</button>
-    </form>
-
-    {% endif %}
-    {% endif %}
-
-    {% endblock content %}
+{% endblock content %}
