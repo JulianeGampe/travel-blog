@@ -11,6 +11,10 @@ a {
     text-decoration: none;
 }
 
+i {
+    font-size: 20px;
+}
+
 /* homepage styling */
 #backgroundimage {
     background: url(https://res.cloudinary.com/dj9mjerfb/image/upload/v1649575200/homepage_iqbinf.jpg) no-repeat center center fixed;
@@ -88,7 +92,7 @@ a {
 @media screen and (min-width: 576px) {
     body {
         padding-top: 50px;
-        padding-bottom: 50px;
+        padding-bottom: 40px;
     }
 
     /* homepage styling for min-width 576px */
