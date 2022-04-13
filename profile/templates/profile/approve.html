@@ -2,11 +2,17 @@
 
 {% block content %}
 
-<form action="." method="POST">
-    {% csrf_token %}
-    <h3>Do you to approve the Comment?</h3>
-    <p><input type="submit" value="Yes"><a href="{% url 'profile' %}">Cancel</a></p>
-</form>
-
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-md-8 mt-5 offset-md-2">
+            <form action="." method="POST">
+                {% csrf_token %}
+                <h3>Do you want to approve the Comment?</h3>
+                <button class="button btn-signup btn-md mt-5" type="submit">Approve Comment</button>
+                <a href="{% url 'profile' %}">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
 
 {% endblock content %}
