@@ -74,6 +74,10 @@ i {
     width: 100%;
 }
 
+.hearticon {
+    color: red;
+}
+
 /* about me page styling */
 #aboutmeimage {
     width: 100%;
