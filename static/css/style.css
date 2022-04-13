@@ -36,6 +36,11 @@ body {
     font-weight: 800;
 }
 
+/* about me page styling */
+#aboutmeimage {
+    width: 100%;
+}
+
 @media screen and (min-width: 576px) {
     body {
         padding-top: 50px;
