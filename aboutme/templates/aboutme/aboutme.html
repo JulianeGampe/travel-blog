@@ -2,17 +2,29 @@
 
 {% block content %}
     
-    <div><img src="https://res.cloudinary.com/dj9mjerfb/image/upload/v1649575967/pexels-rachel-claire-6761976_m9ftlc.jpg" alt="Picture of Mia at the beach" style="width: 300px"></div>
-    <p>
-        My name is Mia and I am 27 years old. In 2019 I decided to leave my job, 
-        pack my bags and travel the world. My plan is to travel as many countries
-        as possible. you can follow me on my journey on my blog.
-    </p>
-    <p>
-        Leave me a comment or drop me an <a href="{% url 'contact' %}">email</a> with your travel suggestions. 
-    </p>
-    <p>
-        Join me on the way and <a href="{% url 'posts' %}">read my blog</a>.
-    </p>
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-md-8 mt-5 offset-md-2">
+            <h2>About Me</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mt-3">
+            <img src="https://res.cloudinary.com/dj9mjerfb/image/upload/v1649575967/pexels-rachel-claire-6761976_m9ftlc.jpg" alt="Picture of Mia at the beach" id="aboutmeimage">
+        </div>
+        <div class="col-md-6 mt-3">
+            <p>
+                My name is Mia and I am 27 years old. In 2019 I decided to leave my job, 
+                pack my bags and travel the world. My plan is to travel as many countries
+                as possible. you can follow me on my journey on my blog.
+            </p>
+            <p>
+                Leave me a comment or drop me an <a href="{% url 'contact' %}">email</a> with your travel suggestions. 
+            </p>
+            <p>
+                Join me on the way and <a href="{% url 'posts' %}">read my blog</a>.
+            </p>
+        </div>
+    </div>
 
 {% endblock content %}
