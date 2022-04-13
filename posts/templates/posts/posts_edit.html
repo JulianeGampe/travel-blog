@@ -3,16 +3,28 @@
 
 {% block content %}
 
-
-<form action="." method="POST">
-    {% csrf_token %}
-    <h3>Please edit your post here:</h3>
-    <form method="POST">
+<div class="container mb-5">
+    <form action="." method="POST">
         {% csrf_token %}
-        {{edit_form|crispy}}
-        <button class="button btn-signup btn-lg" type="submit">Edit Post</button>
-        <a href="{% url 'posts' %}">Cancel</a></p>
+        <div class="row">
+            <div class="col-md-8 mt-5 offset-md-2">
+                <h2>Please edit your post here:</h2>
+            </div>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    {{edit_form|crispy}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 offset-md-2 mt-2">
+                    <button class="button btn-signup btn-md" type="submit">Edit Post</button>
+                    <a href="{% url 'posts' %}">Cancel</a></p>
+                </div>
+            </div>
+        </form>
     </form>
-</form>
+</div>
 
 {% endblock content %}
