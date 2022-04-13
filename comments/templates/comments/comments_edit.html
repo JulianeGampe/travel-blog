@@ -3,21 +3,25 @@
 
 {% block content %}
 
-
-{% if edited_comment %}
-    <div>Your comment is awaiting approval</div>
-{% else %}
-<form action="." method="POST">
-    {% csrf_token %}
-    <h3>Please edit your comment here:</h3>
-    <form method="POST">
-        {% csrf_token %}
-        {{edit_form|crispy}}
-        <button class="button btn-signup btn-lg" type="submit">Edit Comment</button>
-        <a href="{% url 'posts' %}">Cancel</a></p>
-    </form>
-</form>
-{% endif %}
-
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-md-8 mt-5 offset-md-2">
+            {% if edited_comment %}
+                <div>Your comment is awaiting approval</div>
+            {% else %}
+            <form action="." method="POST">
+                {% csrf_token %}
+                <h2>Please edit your comment here:</h2>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{edit_form|crispy}}
+                    <button class="button btn-signup btn-md mt-2" type="submit">Edit Comment</button>
+                    <a href="{% url 'posts' %}">Cancel</a></p>
+                </form>
+            </form>
+            {% endif %}
+        </div>
+    </div>
+</div>
 
 {% endblock content %}
