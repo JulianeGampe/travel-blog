@@ -36,6 +36,27 @@ body {
     font-weight: 800;
 }
 
+/* posts page styling */
+.postscard {
+    width: 90%;
+}
+
+.postscardimage {
+    width: 100%;
+}
+
+.postscardtitle {
+    font-size: 20px;
+}
+
+.postscardtext {
+    font-size: 15px;
+}
+
+.postscardtitlelink {
+    text-decoration: none;
+}
+
 /* about me page styling */
 #aboutmeimage {
     width: 100%;
