@@ -44,7 +44,7 @@
                     {% endif %}
                     <div class="card-body">
                         <a href="{% url 'comments' post.slug %}" class="postscardtitlelink">
-                            <h3 class="card-title postscardtitle">{{ post.title }}</h3>
+                            <h3 class="card-title postscardtitle" id="posttitle">{{ post.title }}</h3>
                         </a>
                         <p class="card-text postscardtext">
                             By: {{ post.author }} <br>
