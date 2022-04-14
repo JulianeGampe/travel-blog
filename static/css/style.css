@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
 body {
     padding-top: 70px;
     padding-bottom: 40px;
     background-color: #7EB6D9;
+    font-family: Kalam, sans-serif;
 }
 
 nav,
@@ -15,11 +18,21 @@ footer,
     color: #000;
 }
 
+.navbar-brand {
+    font-size: 25px;
+}
+
+.nav-link {
+    font-size: 20px;
+}
+
 .nav-link:hover {
     background-color: #D9C6B0;
     color: #000;
     text-decoration: underline;
 }
+
+
 
 .btn {
     border: none;
@@ -32,12 +45,12 @@ footer,
 }
 
 .bold {
-    font-weight: 500;
+    font-weight: 800;
 }
 
 a {
     color: #000;
-    font-weight: 500;
+    font-weight: 800;
     text-decoration: none;
 }
 
@@ -50,6 +63,10 @@ a:hover {
 i {
     font-size: 20px;
     color: #000;
+}
+
+p {
+    font-size: 17px;
 }
 
 /* homepage styling */
