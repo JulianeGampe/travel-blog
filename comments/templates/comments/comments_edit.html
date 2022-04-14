@@ -15,7 +15,7 @@
                 <form method="POST">
                     {% csrf_token %}
                     {{edit_form|crispy}}
-                    <button class="button btn-signup btn-md mt-2" type="submit">Edit Comment</button>
+                    <button class="btn btn-signup btn-md mt-2" type="submit">Edit Comment</button>
                     <a href="{% url 'posts' %}">Cancel</a></p>
                 </form>
             </form>
