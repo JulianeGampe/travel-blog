@@ -47,9 +47,9 @@
                             </p>
                             <p class="profilecardtext">{{ comment.body }}</p>
                             {% if comment.approved == False %}
-                            <a href="{% url 'approve' comment.id %}"><button>Approve Comment</button></a>
+                            <a href="{% url 'approve' comment.id %}" class="btn">Approve Comment</a>
                             {% endif %}
-                            <a href="{% url 'delete' comment.id %}"><button>Delete</button></a>
+                            <a href="{% url 'delete' comment.id %}" class="btn">Delete</a>
                         </div>
                         {% endfor %}
                     </div>
