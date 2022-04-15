@@ -1,5 +1,42 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
+
+Sources:
+
+Help with Django blog/ function based view for comments
+
+https://www.youtube.com/watch?v=m3hhLE1KR5Q
+https://github.com/SteinOveHelset/codewithstein
+
+Help with approval of comments
+https://djangocentral.com/creating-comments-system-with-django/
+
+
+Solution to make the name of the comments model the username:
+https://stackoverflow.com/questions/65733442/in-django-how-to-add-username-to-a-model-automatically-when-the-form-is-submit
+
+Help with confirmation of comment delete:
+https://www.youtube.com/watch?v=3VBHWLFza4s
+
+Help with {{ post.image.url }} cloudinary:
+https://www.youtube.com/watch?v=1T6G7Znrbfg
+
+Aboutme image
+https://www.pexels.com/photo/a-woman-leaning-out-of-a-window-train-6761976/
+
+
+Image as card background
+https://www.tutorialspoint.com/Turn-an-image-into-a-Bootstrap-4-card-background
+
+
+Text Center
+https://mdbootstrap.com/docs/b4/jquery/utilities/horizontal-align/
+
+Google Fonts
+https://fonts.google.com/specimen/Kalam?category=Handwriting#glyphs
+
+
+
 Welcome JulianeGampe,
 
 This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
