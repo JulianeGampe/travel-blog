@@ -7,8 +7,8 @@ from profile.forms import PostForm
 def profile(request):
 
     if request.method == 'POST':
-        post_form = PostForm(request.POST)
-
+        post_form = PostForm(request.POST, request.FILES)
+        
         if post_form.is_valid():
             post_form = post_form.save(commit=False)
             post_form.author = request.user
