@@ -3,16 +3,20 @@
 {% block content %}
 
 <div class="container mb-5">
-    <div class="row">
-        <div class="col-md-8 mt-5 offset-md-2">
-            <form action="." method="POST">
-                {% csrf_token %}
-                <h3>Do you really want to delete this comment?</h3>
-                <button class="btn btn-signup btn-md mt-5" type="submit">Delete permanently</button>
-                <a href="{% url 'posts' %}">Cancel</a></p>
-            </form>
+    <form action="." method="POST">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-md-8 mt-5 offset-md-2">
+                <h2>Do you really want to delete this comment?</h2>
+            </div>
         </div>
-    </div>
+        <div class="row">
+            <div class="col-md-8 mt-5 offset-md-2">
+                <button class="btn btn-signup btn-md" type="submit">Delete permanently</button>
+                <a href="{% url 'posts' %}">Cancel</a>
+            </div>
+        </div>
+    </form>
 </div>
 
 {% endblock content %}
