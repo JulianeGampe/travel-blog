@@ -4,7 +4,7 @@
 
 <div class="container mb-5">
         
-    {% if request.user.is_superuser %}
+    {% if request.user.is_superuser or user.username|lower == 'mia_travels' %}
     <div class="row">
         <div class="col-md-8 mt-5 offset-md-2">
             <h2>My drafts</h2>
@@ -52,7 +52,7 @@
                             Update: {{ post.updated }} <br>
                             Likes: {{ post.number_of_likes }}
                         </p>  
-                        {% if request.user.is_superuser %}
+                        {% if request.user.is_superuser or user.username|lower == 'mia_travels' %}
                         <a href="{% url 'edit_post' post.id %}" class="btn btn-primary">Edit Post</a>
                         <a href="{% url 'delete_post' post.id %}" class="btn btn-primary">Delete Post</a>
                         {% endif %}
