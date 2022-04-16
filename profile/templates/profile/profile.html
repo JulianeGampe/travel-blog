@@ -36,6 +36,7 @@
                     </div>
                     <div class="card-text">
                         {% for comment in comments %}
+                        {% if comment.approved == False %}
                         <div class="border border-3 pt-2 pb-2">
                             <p class="profilecarddetails">
                                 ID: {{ comment.id }} |
@@ -46,11 +47,42 @@
                                 {{ comment.email }} 
                             </p>
                             <p class="profilecardtext">{{ comment.body }}</p>
-                            {% if comment.approved == False %}
                             <a href="{% url 'approve' comment.id %}" class="btn">Approve Comment</a>
-                            {% endif %}
                             <a href="{% url 'delete' comment.id %}" class="btn">Delete</a>
                         </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-md-8 mt-5 offset-md-2">
+            <div class="card border-5">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h2>Already approved comments:</h2>
+                    </div>
+                    <div class="card-text">
+                        {% for comment in comments %}
+                        {% if comment.approved == True %}
+                        <div class="border border-3 pt-2 pb-2">
+                            <p class="profilecarddetails">
+                                ID: {{ comment.id }} |
+                                For Post: {{ comment.post }} |
+                                <br>
+                                Comment created: {{ comment.created }} |
+                                By: {{ comment.name }} |
+                                {{ comment.email }} 
+                            </p>
+                            <p class="profilecardtext">{{ comment.body }}</p>
+                            <a href="{% url 'delete' comment.id %}" class="btn">Delete</a>
+                        </div>
+                        {% endif %}
                         {% endfor %}
                     </div>
                 </div>
