@@ -105,7 +105,9 @@ p {
 }
 
 .postscardimage {
-    width: 100%;
+    width: auto;
+    height: 300px;
+    object-fit: contain;
 }
 
 .postscardtitle {
