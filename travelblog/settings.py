@@ -162,6 +162,7 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # TINYMCE_JS_URL = os.path.join(STATIC_URL, "tinymce/tinymce.min.js")
 # TINYMCE_JS_ROOT = os.path.join(STATIC_ROOT, "tinymce")
+TINYMCE_COMPRESSOR = False
 
 TINYMCE_DEFAULT_CONFIG = {
     'cleanup_on_startup': True,
