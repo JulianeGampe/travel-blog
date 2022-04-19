@@ -160,6 +160,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
+TINYMCE_JS_ROOT = os.path.join(STATIC_URL, "tiny_mce")
 
 TINYMCE_DEFAULT_CONFIG = {
     'cleanup_on_startup': True,
