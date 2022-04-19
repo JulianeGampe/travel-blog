@@ -35,6 +35,16 @@ https://mdbootstrap.com/docs/b4/jquery/utilities/horizontal-align/
 Google Fonts
 https://fonts.google.com/specimen/Kalam?category=Handwriting#glyphs
 
+Upload cloudinary pictures from frontend:
+https://jszczerbinski.medium.com/django-web-app-and-images-cloudinary-straightforward-study-ae8b5bb03e37
+
+Using the tinymce widget in forms.py
+https://django-tinymce.readthedocs.io/en/latest/usage.html#using-the-widget
+
+Tinymce video
+https://www.youtube.com/watch?v=l9VZlqCbiLk
+
+
 
 
 Welcome JulianeGampe,
