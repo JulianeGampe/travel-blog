@@ -1,6 +1,8 @@
 # Mia's Travel Adventures
 
+Mia's travel adventures is a travel blog website of a fictitious blogger named Mia. It is targeted towards users who are interested in traveling and who would like to interact with the blogger and other users by leaving comments and liking posts. The user can find the blogposts of Mia as well as more information about the blogger and contact information. There is an option to create an account to be able to leave comments and like the posts.
 
+For the blogger themselves an admin page is accessible after login, where the blogger can write posts and approve or delete comments.
 
 ![Responsive Mockup](documentation/screenshots/amiresponsive.png)
 
