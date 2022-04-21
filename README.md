@@ -28,13 +28,20 @@ For the blogger themselves an admin page is accessible after login, where the bl
 - As a site owner I can approve or disapprove comments so that I can filter out questionable comments.
 - As a site owner I can approve comments from the frontend so that I don't have to use the admin tool.
 
-
 ## UX
 ### Colour Scheme
 
-[Color Tool](https://material.io/resources/color/#!/?view.left=1&view.right=1&primary.color=201773) and [Adobe Color](https://color.adobe.com/create/color-contrast-analyzer) have been used to find and test the colors. 
+As a first step the color extractor from [Adobe Color](https://color.adobe.com/create/image) has been used to extract colors from the chosen background image.
 
-![Color Tool](documentation/screenshots/colortestone.png)
+![Color Tool](documentation/screenshots/extractcolor.png)
+
+The light blue color #7EB6D9 from the homepage image has been used as the background color for the other pages. 
+
+The light brown color #D9C6B0 was used as the background color for the header and footer as well as for the buttons on the website.
+
+Black #000 was used as font color throughout the page as it contrasts well with the chosen background colors #7EB6D9 and #D9C6B0. This was tested in a contrast checker.
+
+The darker blue color #446EA6 has been used as the background color for the hovered buttons in combination with white #fff as the font color. This contrast has been checked in a contrast checker as well.
 
 ### Typography 
 
@@ -139,6 +146,10 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 
 
 Sources:
+
+https://color.adobe.com/create/image
+
+
 
 Help with Django blog/ function based view for comments
 
