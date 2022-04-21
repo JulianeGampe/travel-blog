@@ -66,30 +66,124 @@ Wireframes created with Balsamiq were used to plan the layout of the website.
 
 ### Existing Features
 
-- __Header__
+- __Navigation Bar__
 
-  - The main heading in the header will allow the user to see the purpose of the website.
+  - Featured on all pages the navigation bar includes links to the Homepage, Blog, About Me, Contact, Sign Up and Login. When logged in Logout is visible, while Sign Up and Login disappear. If the site owner/blogger is logged in there is a link to the frontend Admin page as well.
+  - The navigation bar is fully responsive and identical on all pages to offer easy navigation.
+  - It allows the user to easily navigate between the different pages across all devices, without having to use the “back” or “forward” buttons.
+   - On small screen sizes the navbar will collapse into a toggler icon to keep the page well arranged.
 
-![Header](documentation/screenshots/header.png)
+![Navigation Bar](documentation/screenshots/navigationbar.png)
+![Navigation Bar Toggler](documentation/screenshots/navigationbartoggler.png)
 
+- __Home Page__
 
+  - The Home Page will allow the user to see the aim and purpose of the website.
 
+![Home Page](documentation/screenshots/homepage.png)
 
+- __Blog Page__
+
+  - On the Blog Page the user can see the title of the blogposts as well as the creation/update date and the number of likes.
+  - The site owner/blogger, when logged in, will additionally see their drafts and has the option to edit or delete their posts.
+  - The title of each blogpost can be clicked to navigate to a detailed post view.
+
+![Blog Page](documentation/screenshots/blog.png)
+![Blog Page Admin](documentation/screenshots/blogadmin.png)
+
+- __Post Detail with Comments__
+
+  - On the post detail page the user has the possibility to read the post content and the comments of the other users.
+  - When logged in:
+    - the user can like/unlike the post
+    - leave a comment (which will have to be approved by the site owner/blogger first)
+    - edit or delete their own comments
+
+![Post Detail with Comments](documentation/screenshots/comments.png)
+![Post Detail with Comments when logged in](documentation/screenshots/commentslogin.png)
+
+- __About Me Page__
+
+  - On the About Me Page the user can find out more information about the blogger and their reasons to start the travel blog.
+
+![About Me](documentation/screenshots/aboutme.png)
+
+- __Contact Page__
+
+  - On the Contact Page the user can find different options on how to contact the blogger.
+
+![Contact](documentation/screenshots/contact.png)
+
+- __Sign Up Page__
+
+  - The Sign Up Page allows the user to create an account.
+  - The User will be asked to create a username and password, an email-address is optional.
+
+![Sign Up Page](documentation/screenshots/signup.png)
+
+- __Login Page__
+
+  - The Login Page allows users, who already created an account, to login with their username and password.
+
+![Login Page](documentation/screenshots/login.png)
+
+- __Logout Page__
+
+  - The Logout Page allows the user to logout.
+
+![Logout Page](documentation/screenshots/logout.png)
+
+- __Admin Page (Frontend)__
+
+  - The Admin Page is only visible to the site owner/blogger, when logged in.
+  - The blogger can create their posts/drafts.
+  - The blogger can see new user comments and approve or delete them.
+  - The blogger can delete already approved comments as well.
+
+![Admin Page Post Creation](documentation/screenshots/adminone.png)
+![Admin Page Approve Comments](documentation/screenshots/admintwo.png)
 
 - __Footer__
 
-  - The footer will display a link to social media.
-  - The user can click the icon to visit the social media website in a separate tab.
+  - The footer displays links to the social media sites of the blogger.
+  - The user can click the respective icon to visit the social media website in a separate tab.
 
 ![Footer](documentation/screenshots/footer.png)
 
+- __Admin Panel (Backend)__
+
+  - The Admin Panel is only accessible to the site owner, when logged in.
+  - As the main functionality of creating posts and approving comments is given on the frontend admin page, the backend admin panel should be used for maintenance only.
+  - Nevertheless it is possible to create posts and approve comments from the backend admin panel as well.
+
+![Admin Page Backend](documentation/screenshots/adminbackend.png)
+
+- __Messages__
+
+  - Messages are displayed at the top of the screen to notify the user when they have created/edited/deleted their comment and the site owner/blogger when they have created/edited/deleted their post and when they have approved the comment of a user.
+  - This way the user/site owner will know when they have changed content.
+
+![Messages Example](documentation/screenshots/messagesone.png)
+![Messages Example](documentation/screenshots/messagestwo.png)
+
 ### Features Left to Implement
 
-- __Feature 1__
+- __Commenting on other users comments__
 
-  - A feature that allows....
+  - A feature that allows a user to leave a comment directly for the comment of another user and not just to the post in general. 
+  - This would allow the site to become even more interactive.
 
+- __Expanding the Frontend Admin Access__
 
+  - A feature that allows to give access to the frontend admin panel in an easier way, by creating a new field in the model like
+  ```python
+    is_admin: models.BooleanField(default=False) 
+  ```
+  an using the following in the templates
+  ```html
+    {% if user.is_admin %}
+  ```
+  - This would provide an easier way give to allow users admin access in case the blog expands.
 
 ## Technologies Used
 
@@ -202,112 +296,3 @@ messages video
 https://www.youtube.com/watch?v=VIx3HD2gRWQ
 
 messages timeout function and display
-
-
-
-Welcome JulianeGampe,
-
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
