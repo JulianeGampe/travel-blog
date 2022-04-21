@@ -169,8 +169,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
-TINYMCE_JS_URL = os.path.join(STATIC_URL, "/static/tinymce/tinymce.min.js")
-TINYMCE_JS_ROOT = os.path.join(STATIC_ROOT, "/static/tinymce/")
+# TINYMCE_JS_URL = os.path.join(STATIC_URL, "/static/tinymce/tinymce.min.js")
+# TINYMCE_JS_ROOT = os.path.join(STATIC_ROOT, "/static/tinymce/")
+
 TINYMCE_COMPRESSOR = False
 
 # TINYMCE_DEFAULT_CONFIG = {
