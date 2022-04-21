@@ -8,6 +8,25 @@ For the blogger themselves an admin page is accessible after login, where the bl
 
 ## User Stories
 
+- As a user I can see the homepage so that I know at first glance what the website is about.
+- As a user I can find out more about the site owner so that I will gain some background information.
+- As a user I can see contact information so that I can get in touch with the site owner.
+- As a user I can see the blog posts so that I can read about the travel journey.
+- As a user I can register for an account so that I can comment and like posts.
+- As a user I can leave a comment to a post so that I can share my opinion and make travel suggestions.
+- As a user I can edit my comment so that I have the possibility to update my comment.
+- As a user I can delete my comment so that I am able to remove a comment I don´t want to be visible any longer.
+- As a user I can like a post so that can show if I liked the content of the post.
+
+- As a user/site owner I can see the comments so that I can read the conversation.
+- As a user/site owner I can see the likes for each post so that I know which post is very popular.
+- As a user/site owner I can see a message after I have left a comment/created a post on the frontend so that I know that the comment/post was successfully generated.
+
+- As a site owner I can create, read and update my posts so that I can manage my travel blog appropriately.
+- As a site owner I can create, update and delete my posts from the frontend so that I do not need use the admin tool.
+- As a site owner I can create drafts so that I don't have to publish the post immediately and can finish it later.
+- As a site owner I can approve or disapprove comments so that I can filter out questionable comments.
+- As a site owner I can approve comments from the frontend so that I don't have to use the admin tool.
 
 
 ## UX
