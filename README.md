@@ -45,9 +45,9 @@ The darker blue color #446EA6 has been used as the background color for the hove
 
 ### Typography 
 
-Google Fonts has been used to find the font, that is displayed on the website. [Cabin](https://fonts.google.com/specimen/Cabin?category=Sans+Serif&preview.text=Vocabulary%20Quiz&preview.text_type=custom#standard-styles) ....
+Google Fonts has been used to find the font, that is displayed on the website. [Kalam](https://fonts.google.com/specimen/Kalam?category=Handwriting#glyphs) is a handwriting font family. As described on Google Fonts the fonts have been optimized for text usage on screen. The design feels very personal and the letters appear similar as the letters used in everyday handwriting. That is why is font has been chosen - the feeling of reading a personal travel journal should be conveyed to the reader. 
 
-To provide visual cues icons from [Font Awesome](https://fontawesome.com/) have been used in ....
+To provide visual cues icons from [Font Awesome](https://fontawesome.com/) have been used in the footer to point to the social  media websites. 
 
 ### Wireframes
 
