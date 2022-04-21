@@ -245,18 +245,53 @@ Due to the length of testing, you can see all tests in the [TESTING.md](TESTING.
 
 ## Deployment
 
-- The site was deployed....
+- The site was deployed to Heroku.
+- Steps for deployment
+  - Create a new Heroku app
 
-The live link can be found here - 
+  ![Create App](documentation/screenshots/createapp.png)
+  ![Create App Step 2](documentation/screenshots/createappstep2.png)
+
+  - Attach the database
+      1. click on the _Resources_ tab
+      2. in the add-ons bar search for Postgres and add it to the project
+  
+  ![Attach Database](documentation/screenshots/attachdatabase.png)
+
+  - Set up the _Config Vars_ 
+      1. DATABASE_URL is the connection to the Postgres database and is added to the project
+      2. add the SECRET_KEY from the django project
+      3. add the CLOUDINARY_URL
+
+  - Link the Heroku app to the repository in the _Deploy_ tab
+
+  ![Connect to GitHub](documentation/screenshots/connecttogithub.png)
+  ![Search Repository](documentation/screenshots/searchrepository.png)
+  ![Connect to GitHub result](documentation/screenshots/connecttogithubresult.png)
+
+  - Click on Deploy
+
+  ![Deploy](documentation/screenshots/deploy.png)
+  ![Deploy result](documentation/screenshots/deployresult.png)
+
+  - Due to changes on Heroku, subsequent deployments have been done manually from the terminal
+      1. Connect the Heroku app to the Gitpod terminal
+          - `heroku login -i`
+          - `heroku git:remote -a travelblogproject`
+      
+      2. Deploy the new version of the app
+          - `git push heroku main`
+
+The live link can be found here - https://travelblogproject.herokuapp.com/
 
 ### Local Deployment
 
 If you would like to make a local copy of this repository, you can clone it by typing the following command in your IDE terminal:
-- `git clone https://github.com/JulianeGampe/vocabulary-quiz.git`
+- `git clone https://github.com/JulianeGampe/travel-blog.git`
 
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/JulianeGampe/vocabulary-quiz)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/JulianeGampe/travel-blog)
 
 ## Credits 
 
