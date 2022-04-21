@@ -187,16 +187,45 @@ Wireframes created with Balsamiq were used to plan the layout of the website.
 
 ## Technologies Used
 
-- HTML was used to structure the website semantically and display it in the browser.
-- CSS was used for the presentation and style of the website.
-- CSS grid was used for the layout of the website.
-- JavaScript was used to make the website interactive.
-- [Balsamiq](https://balsamiq.com/wireframes/) was used to create the wireframes.
-- [Gitpod](https://www.gitpod.io/) was used for the development of the website.
-- [Github](https://github.com/) was used to store the code online.
-- Git was used for version control.
-- [hatchful](https://hatchful.shopify.com/) was used for the favicon.
-- [Font Awesome](https://fontawesome.com/) was used for the icons.
+- HTML 
+    - was used to structure the website semantically and display it in the browser.
+- [Bootstrap](https://getbootstrap.com/) 
+    - CSS framework used to build responsive design.
+- CSS 
+    - was used for additional presentation and style of the website.
+- JavaScript 
+    - was used to make the website interactive.
+- [Python](https://www.python.org/) 
+    - was used as programming language to write the code.
+- [Django](https://www.djangoproject.com/)
+    - framework has been used to build the project and the apps.
+- [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) 
+    - is used to create the forms in the application.
+- [TinyMCE](https://www.tiny.cloud/) 
+    - is used as the text editor.
+- [Gitpod](https://www.gitpod.io/) 
+    - was used for the development of the website.
+- [Github](https://github.com/) 
+    - was used to store the code online.
+- Git 
+    - was used for version control.
+- [The GitHub Projects Board](https://github.com/JulianeGampe/travel-blog/projects/1) 
+    - was used to keep track of tasks that are still to do or in progress or see tasks that are already done.
+- [The GitHub Issues tracker](https://github.com/JulianeGampe/travel-blog/issues) 
+    - was used to keep track of bugs and add solutions.
+- [Balsamiq](https://balsamiq.com/wireframes/) 
+    - was used to create the wireframes.
+- [Font Awesome](https://fontawesome.com/) 
+    - was used for the icons.
+- [Cloudinary](https://cloudinary.com/) 
+    - is used to store and upload the images.
+- [Heroku](https://www.heroku.com/home) 
+    - is used to deploy the application
+- [Google Fonts](https://fonts.google.com/)
+    - was used for the website font
+- [Adobe Color](https://color.adobe.com/create/image)
+    - was used for extracting the colors from the homepage image and for color testing.
+
 
 ## Testing
 
