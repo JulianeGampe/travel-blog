@@ -31,8 +31,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-X_FRAME_OPTIONS = 'SAMEORIGIN'
-
 ALLOWED_HOSTS = ['travelblogproject.herokuapp.com', 'localhost']
 
 
@@ -172,6 +170,8 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 TINYMCE_JS_URL = os.path.join(STATIC_URL, "/static/tinymce/tinymce.min.js")
 TINYMCE_JS_ROOT = os.path.join(STATIC_ROOT, "/static/tinymce/")
 TINYMCE_COMPRESSOR = False
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 # TINYMCE_DEFAULT_CONFIG = {
 #     'cleanup_on_startup': True,
