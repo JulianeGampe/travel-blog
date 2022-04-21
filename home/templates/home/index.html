@@ -6,6 +6,14 @@
     <div class="container" id="homecontainer"></div>
         <div class="row" id="homerow">
             <div class="col-sm-8 mt-3 offset-sm-3">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert {{ message.tags }} alert-dismissable fade show" id="msg" role="alert">
+                    {{ message|safe }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
                 <div class="card" id="homecard">
                     <div class="card-body">
                         <h2 class="card-title" id="homecardtitle">Welcome to my Travel Blog!</h2>
