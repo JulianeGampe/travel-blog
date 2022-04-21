@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from posts.models import Post
 from comments.models import Comment
 from profile.forms import PostForm
+from django.contrib import messages
 
 
 def profile(request):
@@ -13,6 +14,7 @@ def profile(request):
             post_form.author = request.user
             post_form.profile = profile
             post_form.save()
+            messages.success(request, 'Your post was created.')
 
             return redirect('posts')
 
@@ -39,5 +41,6 @@ def approve(request, comment_id):
     if request.method == "POST":
         comment.approved = True
         comment.save()
+        messages.success(request, 'You approved the comment.')
         return redirect('profile')
     return render(request, template, context)
