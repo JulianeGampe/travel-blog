@@ -185,6 +185,18 @@ Wireframes created with Balsamiq were used to plan the layout of the website.
   ```
   - This would provide an easier way give to allow users admin access in case the blog expands.
 
+## Database Models
+
+ - The posts and comments app require databases to store information. Two models have been build.
+
+ __Post Model__
+
+![Post Model](documentation/screenshots/postmodel.png)
+
+ __Comments Model__
+
+ ![Comments Model](documentation/screenshots/commentsmodel.png)
+
 ## Technologies Used
 
 - HTML 
