@@ -3,6 +3,7 @@ from posts.models import Post
 from comments.models import Comment
 from comments.forms import CommentForm
 from django.http import HttpResponseRedirect
+from django.contrib import messages
 
 
 def comments(request, slug):
@@ -21,6 +22,7 @@ def comments(request, slug):
             new_comment.name = request.user
             new_comment.post = post
             new_comment.save()
+            messages.info(request, 'Your comment is awaiting approval.')
 
     else:
         form = CommentForm()
@@ -45,6 +47,10 @@ def edit_comment(request, comment_id):
             edited_comment = edit_form.save(commit=False)
             edited_comment.approved = False
             edited_comment.save()
+            messages.info(
+                request,
+                'You have edited your comment. It is awaiting approval.'
+                )
     edit_form = CommentForm(instance=comment)
     template = "comments/comments_edit.html"
     context = {
@@ -63,5 +69,6 @@ def delete_comment(request, comment_id):
 
     if request.method == "POST":
         comment.delete()
+        messages.success(request, 'You have deleted the comment.')
         return redirect('posts')
     return render(request, template, context)
