@@ -3,7 +3,20 @@
 {% block content %}
 
 <div class="container mb-5">
-        
+    
+    {% if messages %}
+    {% for message in messages %}
+    <div class="row">
+        <div class="col-md-8 mt-5 offset-md-2">
+            <div class="alert {{ message.tags }} alert-dismissable fade show" id="msg" role="alert">
+            {{ message|safe }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+
     {% if request.user.is_superuser or user.username|lower == 'mia_travels' %}
     <div class="row">
         <div class="col-md-8 mt-5 offset-md-2">
