@@ -5,6 +5,7 @@ from comments.forms import CommentForm
 from django.http import HttpResponseRedirect
 from .forms import PostEditForm
 from datetime import datetime
+from django.contrib import messages
 
 
 def posts(request):
@@ -38,6 +39,7 @@ def edit_post(request, post_id):
             edited_post.updated = datetime.now()
             edited_post = edit_form.save(commit=False)
             edited_post.save()
+            messages.success(request, 'You have edited the post.')
             return redirect('posts')
     edit_form = PostEditForm(instance=edited_post)
 
@@ -57,5 +59,6 @@ def delete_post(request, post_id):
 
     if request.method == "POST":
         posts_delete.delete()
+        messages.success(request, 'You have deleted the post.')
         return redirect('posts')
     return render(request, template, context)
