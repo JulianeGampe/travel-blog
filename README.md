@@ -53,9 +53,14 @@ To provide visual cues icons from [Font Awesome](https://fontawesome.com/) have 
 
 Wireframes created with Balsamiq were used to plan the layout of the website.
 
-![Wireframe](documentation/wireframes/vocabularyquiz.png)
-
-
+![Wireframe Homepage](documentation/wireframes/home.png)
+![Wireframe Homepage Mobile](documentation/wireframes/homemobile.png)
+![Wireframe Blog](documentation/wireframes/blog.png)
+![Wireframe Blog Mobile](documentation/wireframes/blogmobile.png)
+![Wireframe About Me](documentation/wireframes/aboutme.png)
+![Wireframe About Me Mobile](documentation/wireframes/aboutmemobile.png)
+![Wireframe Contact](documentation/wireframes/contact.png)
+![Wireframe Contact Mobile](documentation/wireframes/contactmobile.png)
 
 ## Features 
 
