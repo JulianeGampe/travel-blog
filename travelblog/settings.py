@@ -33,6 +33,8 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['travelblogproject.herokuapp.com', 'localhost']
 
+# X_FRAME_OPTIONS = 'SAMEORIGIN'
+
 
 # Application definition
 
@@ -170,8 +172,6 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 TINYMCE_JS_URL = os.path.join(STATIC_URL, "/static/tinymce/tinymce.min.js")
 TINYMCE_JS_ROOT = os.path.join(STATIC_ROOT, "/static/tinymce/")
 TINYMCE_COMPRESSOR = False
-
-X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 # TINYMCE_DEFAULT_CONFIG = {
 #     'cleanup_on_startup': True,
