@@ -1,4 +1,120 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Mia's Travel Adventures
+
+
+
+![Responsive Mockup](documentation/screenshots/amiresponsive.png)
+
+## User Stories
+
+
+
+## UX
+### Colour Scheme
+
+[Color Tool](https://material.io/resources/color/#!/?view.left=1&view.right=1&primary.color=201773) and [Adobe Color](https://color.adobe.com/create/color-contrast-analyzer) have been used to find and test the colors. 
+
+![Color Tool](documentation/screenshots/colortestone.png)
+
+### Typography 
+
+Google Fonts has been used to find the font, that is displayed on the website. [Cabin](https://fonts.google.com/specimen/Cabin?category=Sans+Serif&preview.text=Vocabulary%20Quiz&preview.text_type=custom#standard-styles) ....
+
+To provide visual cues icons from [Font Awesome](https://fontawesome.com/) have been used in ....
+
+### Wireframes
+
+Wireframes created with Balsamiq were used to plan the layout of the website.
+
+![Wireframe](documentation/wireframes/vocabularyquiz.png)
+
+
+
+## Features 
+
+### Existing Features
+
+- __Header__
+
+  - The main heading in the header will allow the user to see the purpose of the website.
+
+![Header](documentation/screenshots/header.png)
+
+
+
+
+
+- __Footer__
+
+  - The footer will display a link to social media.
+  - The user can click the icon to visit the social media website in a separate tab.
+
+![Footer](documentation/screenshots/footer.png)
+
+### Features Left to Implement
+
+- __Feature 1__
+
+  - A feature that allows....
+
+
+
+## Technologies Used
+
+- HTML was used to structure the website semantically and display it in the browser.
+- CSS was used for the presentation and style of the website.
+- CSS grid was used for the layout of the website.
+- JavaScript was used to make the website interactive.
+- [Balsamiq](https://balsamiq.com/wireframes/) was used to create the wireframes.
+- [Gitpod](https://www.gitpod.io/) was used for the development of the website.
+- [Github](https://github.com/) was used to store the code online.
+- Git was used for version control.
+- [hatchful](https://hatchful.shopify.com/) was used for the favicon.
+- [Font Awesome](https://fontawesome.com/) was used for the icons.
+
+## Testing
+
+Due to the length of testing, you can see all tests in the [TESTING.md](TESTING.md) file.
+
+## Deployment
+
+- The site was deployed....
+
+The live link can be found here - 
+
+### Local Deployment
+
+If you would like to make a local copy of this repository, you can clone it by typing the following command in your IDE terminal:
+- `git clone https://github.com/JulianeGampe/vocabulary-quiz.git`
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/JulianeGampe/vocabulary-quiz)
+
+## Credits 
+
+### Content
+
+- Code for .... has been taken from [w3schools](https://...)
+
+### Media 
+
+- The following websites were used to find the colors and do the contrast tests:
+  - [Color Tool](https://material.io/resources/color/#!/?view.left=1&view.right=1&primary.color=201773)
+  - [Adobe Color](https://color.adobe.com/create/color-contrast-analyzer)
+- The font was found on [Google Fonts](https://fonts.google.com/)
+  - [Cabin](https://fonts.google.com/specimen/Cabin?category=Sans+Serif&preview.text=Vocabulary%20Quiz&preview.text_type=custom#standard-styles)
+- The icons in the quiz type buttons and footer were taken from [Font Awesome](https://fontawesome.com/)
+  - [Animals Icon](https://fontawesome.com/v5.15/icons/paw?style=solid)
+  - [Travel Icon](https://fontawesome.com/v5.15/icons/bus-alt?style=solid)
+  - [Food Icon](https://fontawesome.com/v5.15/icons/utensils?style=solid)
+  - [Instagram Icon](https://fontawesome.com/v5.15/icons/instagram?style=brands)
+- [Balsamiq](https://balsamiq.com/wireframes/) was used to create the wireframes.
+- [hatchful](https://hatchful.shopify.com/) was used for the favicon. 
+- [Am I responsive](http://ami.responsivedesign.is/) has been used to create the responsive mockup of the project
+
+### Acknowledgements
+
+- I would like to thank...
 
 
 Sources:
@@ -44,6 +160,11 @@ https://django-tinymce.readthedocs.io/en/latest/usage.html#using-the-widget
 Tinymce video
 https://www.youtube.com/watch?v=l9VZlqCbiLk
 
+
+messages video
+https://www.youtube.com/watch?v=VIx3HD2gRWQ
+
+messages timeout function and display
 
 
 
