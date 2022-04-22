@@ -297,78 +297,32 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 
 ### Content
 
-- Code for .... has been taken from [w3schools](https://...)
+- This [YouTube Video](https://www.youtube.com/watch?v=m3hhLE1KR5Q) and corresponding [Repository](https://github.com/SteinOveHelset/codewithstein) from "Code with Stein" have been used for help with creating the Django blog and writing function based views.
+- [Djangocentral](https://djangocentral.com/creating-comments-system-with-django/) has been used as a help for creating and approving comments with Django.
+- This post from [Stackoverflow](https://stackoverflow.com/questions/65733442/in-django-how-to-add-username-to-a-model-automatically-when-the-form-is-submit) showed me how to set the name field from the Comments Model automatically to the username of the logged in user.
+- This [YouTube Video](https://www.youtube.com/watch?v=3VBHWLFza4s) from CodingEntrepreneurs has shown me how to set up a delete confirmation, for example in the comment_delete view.
+- This [YouTube Video](https://www.youtube.com/watch?v=1T6G7Znrbfg) from Dev Merazig has helped me with the use of cloudinary, especially with setting the source in the template to {{ post.image.url }}.
+- This [article](https://jszczerbinski.medium.com/django-web-app-and-images-cloudinary-straightforward-study-ae8b5bb03e37) from Jacek Szczerbiński has helped me to set up cloudinary for uploading images to the posts from the frontend. Especially by adding request.FILES in the profile view.
+- This [YouTube TinyMCE Django Tutorial](https://www.youtube.com/watch?v=l9VZlqCbiLk) has helped me with implementing the TinyMCE editor.
+- The [Django TinyMCE Documentation]() has helped me with using the TinyMCE widget in forms.py.
+- This [YouTube Django Message Framework Tutorial](https://www.youtube.com/watch?v=VIx3HD2gRWQ) has helped me set up the message notifications.
+- The code for the message timeout function and template display has been taken from [Code Institute Django3blog](https://github.com/Code-Institute-Solutions/Django3blog/blob/master/12_final_deployment/templates/base.html)
 
 ### Media 
 
-- The following websites were used to find the colors and do the contrast tests:
-  - [Color Tool](https://material.io/resources/color/#!/?view.left=1&view.right=1&primary.color=201773)
+- The following website was used to find the color and do the contrast tests:
   - [Adobe Color](https://color.adobe.com/create/color-contrast-analyzer)
 - The font was found on [Google Fonts](https://fonts.google.com/)
-  - [Cabin](https://fonts.google.com/specimen/Cabin?category=Sans+Serif&preview.text=Vocabulary%20Quiz&preview.text_type=custom#standard-styles)
-- The icons in the quiz type buttons and footer were taken from [Font Awesome](https://fontawesome.com/)
-  - [Animals Icon](https://fontawesome.com/v5.15/icons/paw?style=solid)
-  - [Travel Icon](https://fontawesome.com/v5.15/icons/bus-alt?style=solid)
-  - [Food Icon](https://fontawesome.com/v5.15/icons/utensils?style=solid)
-  - [Instagram Icon](https://fontawesome.com/v5.15/icons/instagram?style=brands)
+  - [Kalam](https://fonts.google.com/specimen/Kalam?category=Handwriting#glyphs)
+- The icons for the footer were taken from [Font Awesome](https://fontawesome.com/)
+  - [Instagram Icon](https://fontawesome.com/v5/icons/instagram-square?style=brands&s=brands)
+  - [YouTube Icon](https://fontawesome.com/v5/icons/twitter?style=brands&s=brands)
+  - [Twitter Icon](https://fontawesome.com/v5/icons/twitter?style=brands&s=brands)
 - [Balsamiq](https://balsamiq.com/wireframes/) was used to create the wireframes.
-- [hatchful](https://hatchful.shopify.com/) was used for the favicon. 
 - [Am I responsive](http://ami.responsivedesign.is/) has been used to create the responsive mockup of the project
+- The image for the About Me page has been taken from [Pexels](https://www.pexels.com/photo/a-woman-leaning-out-of-a-window-train-6761976/).
+- The image for the homepage background as well as the images used in the blogposts are photographs taken by myself.
 
 ### Acknowledgements
 
 - I would like to thank...
-
-
-Sources:
-
-https://color.adobe.com/create/image
-
-
-
-Help with Django blog/ function based view for comments
-
-https://www.youtube.com/watch?v=m3hhLE1KR5Q
-https://github.com/SteinOveHelset/codewithstein
-
-Help with approval of comments
-https://djangocentral.com/creating-comments-system-with-django/
-
-
-Solution to make the name of the comments model the username:
-https://stackoverflow.com/questions/65733442/in-django-how-to-add-username-to-a-model-automatically-when-the-form-is-submit
-
-Help with confirmation of comment delete:
-https://www.youtube.com/watch?v=3VBHWLFza4s
-
-Help with {{ post.image.url }} cloudinary:
-https://www.youtube.com/watch?v=1T6G7Znrbfg
-
-Aboutme image
-https://www.pexels.com/photo/a-woman-leaning-out-of-a-window-train-6761976/
-
-
-Image as card background
-https://www.tutorialspoint.com/Turn-an-image-into-a-Bootstrap-4-card-background
-
-
-Text Center
-https://mdbootstrap.com/docs/b4/jquery/utilities/horizontal-align/
-
-Google Fonts
-https://fonts.google.com/specimen/Kalam?category=Handwriting#glyphs
-
-Upload cloudinary pictures from frontend:
-https://jszczerbinski.medium.com/django-web-app-and-images-cloudinary-straightforward-study-ae8b5bb03e37
-
-Using the tinymce widget in forms.py
-https://django-tinymce.readthedocs.io/en/latest/usage.html#using-the-widget
-
-Tinymce video
-https://www.youtube.com/watch?v=l9VZlqCbiLk
-
-
-messages video
-https://www.youtube.com/watch?v=VIx3HD2gRWQ
-
-messages timeout function and display
