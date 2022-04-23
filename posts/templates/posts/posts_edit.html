@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 
+{% block head %}
+{{ edit_form.media }}
+{% endblock %}
+
 {% block content %}
 
 <div class="container mb-5">
