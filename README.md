@@ -321,6 +321,7 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 - [Balsamiq](https://balsamiq.com/wireframes/) was used to create the wireframes.
 - [Am I responsive](http://ami.responsivedesign.is/) has been used to create the responsive mockup of the project
 - The image for the About Me page has been taken from [Pexels](https://www.pexels.com/photo/a-woman-leaning-out-of-a-window-train-6761976/).
+- Paint was used to create the blogposts placeholder image.
 - The image for the homepage background as well as the images used in the blogposts are photographs taken by myself.
 
 ### Acknowledgements
