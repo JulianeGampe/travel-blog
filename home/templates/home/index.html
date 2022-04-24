@@ -6,6 +6,7 @@
     <div class="container" id="homecontainer"></div>
         <div class="row" id="homerow">
             <div class="col-sm-8 mt-3 offset-sm-3">
+            <!-- Display for django contrib messages -->
             {% if messages %}
                 {% for message in messages %}
                     <div class="alert {{ message.tags }} alert-dismissable fade show" id="msg" role="alert">
@@ -14,6 +15,7 @@
                     </div>
                 {% endfor %}
             {% endif %}
+                <!-- Card for the homepage -->
                 <div class="card" id="homecard">
                     <div class="card-body">
                         <h2 class="card-title" id="homecardtitle">Welcome to my Travel Blog!</h2>
