@@ -8,26 +8,24 @@
 {% block content %}
 
 <div class="container mb-5">
-    <form action="." method="POST">
+    <div class="row">
+        <div class="col-md-8 mt-5 offset-md-2">
+            <h2>Please edit your post here:</h2>
+        </div>
+    </div>
+    <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="row">
-            <div class="col-md-8 mt-5 offset-md-2">
-                <h2>Please edit your post here:</h2>
+            <div class="col-md-8 offset-md-2">
+                {{edit_form|crispy}}
             </div>
-        <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    {{edit_form|crispy}}
-                </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 offset-md-2 mt-2">
+                <button class="btn btn-signup btn-md" type="submit">Edit Post</button>
+                <a href="{% url 'posts' %}">Cancel</a></p>
             </div>
-            <div class="row">
-                <div class="col-md-8 offset-md-2 mt-2">
-                    <button class="btn btn-signup btn-md" type="submit">Edit Post</button>
-                    <a href="{% url 'posts' %}">Cancel</a></p>
-                </div>
-            </div>
-        </form>
+        </div>
     </form>
 </div>
 
