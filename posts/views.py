@@ -18,6 +18,9 @@ def posts(request):
 
 
 def likes(request, slug):
+    '''
+    View to like/unlike the post
+    '''
     post = Post.objects.get(slug=slug)
 
     if post.likes.filter(id=request.user.id).exists():
@@ -30,11 +33,18 @@ def likes(request, slug):
 
 
 def edit_post(request, post_id):
+    '''
+    View to edit post from the frontend
+    '''
     edited_post = get_object_or_404(Post, id=post_id)
     template = "posts/posts_edit.html"
 
     if request.method == 'POST':
-        edit_form = PostEditForm(request.POST, request.FILES, instance=edited_post)
+        edit_form = PostEditForm(
+            request.POST,
+            request.FILES,
+            instance=edited_post
+            )
         if edit_form.is_valid():
             edited_post.updated = datetime.now()
             edited_post = edit_form.save(commit=False)
@@ -51,6 +61,9 @@ def edit_post(request, post_id):
 
 
 def delete_post(request, post_id):
+    '''
+    View to delete post from the frontend
+    '''
     posts_delete = get_object_or_404(Post, id=post_id)
     template = "posts/posts_delete.html"
     context = {
