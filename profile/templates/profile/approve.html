@@ -3,15 +3,18 @@
 {% block content %}
 
 <div class="container mb-5">
+    <!-- Form to approve a comment -->
     <form action="." method="POST">
         {% csrf_token %}
         <div class="row">
+            <!-- Approve comment heading -->
             <div class="col-md-8 mt-5 offset-md-2">
                 <h2>Do you want to approve the comment?</h2>
             </div>
         </div>
         <div class="row">
             <div class="col-md-8 mt-5 offset-md-2">
+                <!-- Approve and Cancel button -->
                 <button class="btn btn-signup btn-md" type="submit">Approve Comment</button>
                 <a href="{% url 'profile' %}">Cancel</a>
             </div>
