@@ -1,7 +1,8 @@
 from django.contrib import admin
 from .models import Comment
 
-# Register your models here.
+
+# Register the comments model on the admin panel
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
 
@@ -12,4 +13,3 @@ class CommentAdmin(admin.ModelAdmin):
 
     def approve_comments(self, request, queryset):
         queryset.update(approved=True)
-        
