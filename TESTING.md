@@ -181,9 +181,17 @@ The website funcionalty with all user stories have been tested manually while lo
 
 The following bugs were tracked and fixed using the GitHub Issues tracker with the label of "bug".
 
-![GitHub Issues Tracker](documentation/screenshots/issuestracker.png)
+[GitHub Issues Tracker Closed Issues](https://github.com/JulianeGampe/travel-blog/issues?q=is%3Aissue+is%3Aclosed)
 
-- **calculate points: >=500 points - play_new_round called anyway** - [#1](https://github.com/JulianeGampe/greedy-gremlin/issues/1)
+- **ValueError at /second-test-post/** - [#1](https://github.com/JulianeGampe/travel-blog/issues/14)
+- **Paragraph tags visible in posts** - [#2](https://github.com/JulianeGampe/travel-blog/issues/17)
+- **No approval needed for comments** - [#3](https://github.com/JulianeGampe/travel-blog/issues/18)
+- **Delete comment not possible when "name" spelled incorrectly** - [#4](https://github.com/JulianeGampe/travel-blog/issues/20)
+- **Cancel Deletion of Comment: DoesNotExist at /delete/ --- Post matching query does not exist.** - [#5](https://github.com/JulianeGampe/travel-blog/issues/21)
+- **Approval button for comments on frontend does not work** - [#6](https://github.com/JulianeGampe/travel-blog/issues/25)
+- **ConnectionRefusedError at /accounts/signup/** - [#7](https://github.com/JulianeGampe/travel-blog/issues/26)
+- **Image upload not working from Frontend** - [#8](https://github.com/JulianeGampe/travel-blog/issues/27)
+
 
 ### Remaining Bugs
 
