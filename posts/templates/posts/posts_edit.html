@@ -10,9 +10,11 @@
 <div class="container mb-5">
     <div class="row">
         <div class="col-md-8 mt-5 offset-md-2">
+            <!-- Edit post heading -->
             <h2>Please edit your post here:</h2>
         </div>
     </div>
+    <!-- Form to edit the post -->
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="row">
@@ -22,6 +24,7 @@
         </div>
         <div class="row">
             <div class="col-md-8 offset-md-2 mt-2">
+                <!-- Edit and Cancel button -->
                 <button class="btn btn-signup btn-md" type="submit">Edit Post</button>
                 <a href="{% url 'posts' %}">Cancel</a></p>
             </div>
