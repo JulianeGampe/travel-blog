@@ -115,7 +115,7 @@ The website funcionalty with all user stories have been tested manually while lo
 
 - The project is responsive and functions on all standard screen sizes using the devtools device toolbar.
 
-- The navigation, home page, ........ and the footer are readable and easy to understand.
+- The navigation, home page, blog page, about me page, contact page, sign up page, login page, logout page, admin page and the footer are readable and easy to understand.
 
   -  Google Chrome Desktop
 
