@@ -7,8 +7,11 @@ from tinymce import models as tinymce_models
 STATUS = ((0, "Draft"), (1, "Published"))
 
 
-# Create your models here.
 class Post(models.Model):
+    '''
+    Model for the posts in the blog
+    With fields for creating and displaying the posts
+    '''
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
@@ -24,10 +27,16 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
+        '''
+        Sorts posts by date created
+        '''
         ordering = ["-created"]
 
     def __str__(self):
         return self.title
 
     def number_of_likes(self):
+        '''
+        Returns total number of likes
+        '''
         return self.likes.count()
