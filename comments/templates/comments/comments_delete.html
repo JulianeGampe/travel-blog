@@ -6,11 +6,13 @@
     <form action="." method="POST">
         {% csrf_token %}
         <div class="row">
+            <!-- Delete comment heading -->
             <div class="col-md-8 mt-5 offset-md-2">
                 <h2>Do you really want to delete this comment?</h2>
             </div>
         </div>
         <div class="row">
+            <!-- Delete and Cancel button -->
             <div class="col-md-8 mt-5 offset-md-2">
                 <button class="btn btn-signup btn-md" type="submit">Delete permanently</button>
                 <a href="{% url 'posts' %}">Cancel</a>
