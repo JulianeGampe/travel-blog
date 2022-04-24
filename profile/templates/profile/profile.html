@@ -10,6 +10,7 @@
 <div class="container mb-5">
     <div class="row">
         <div class="col-md-8 mt-5 offset-md-2">
+            <!-- Display django contrib messages -->
             {% if messages %}
             {% for message in messages %}
                 <div class="alert {{ message.tags }} alert-dismissable fade show" id="msg" role="alert">
@@ -18,12 +19,15 @@
                 </div>
             {% endfor %}
             {% endif %}
+            <!-- Card to create a new post -->
             <div class="card border-5">
                 <div class="card-body">
                     <div class="card-title">
+                        <!-- Heading -->
                         <h2>Create a new post:</h2>
                     </div>
                     <div class="card-text">
+                        <!-- Form to create the post-->
                         <form method="POST" enctype="multipart/form-data">
                             {% csrf_token %}
                             {{post_form|crispy}}
@@ -39,12 +43,15 @@
 <div class="container mb-5">
     <div class="row">
         <div class="col-md-8 mt-5 offset-md-2">
+            <!-- Card for comments to be approved-->
             <div class="card border-5">
                 <div class="card-body">
                     <div class="card-title">
+                        <!-- Heading -->
                         <h2>Approve Comments here:</h2>
                     </div>
                     <div class="card-text">
+                        <!-- Display all comments not yet approved -->
                         {% for comment in comments %}
                         {% if comment.approved == False %}
                         <div class="border border-3 pt-2 pb-2">
@@ -57,6 +64,7 @@
                                 {{ comment.email }} 
                             </p>
                             <p class="profilecardtext">{{ comment.body }}</p>
+                            <!-- Buttons to Approve or Delete the comment -->
                             <a href="{% url 'approve' comment.id %}" class="btn">Approve Comment</a>
                             <a href="{% url 'delete' comment.id %}" class="btn">Delete</a>
                         </div>
@@ -72,12 +80,15 @@
 <div class="container mb-5">
     <div class="row">
         <div class="col-md-8 mt-5 offset-md-2">
+            <!-- Card to display all approved comments -->
             <div class="card border-5">
                 <div class="card-body">
                     <div class="card-title">
+                        <!-- Heading -->
                         <h2>Already approved comments:</h2>
                     </div>
                     <div class="card-text">
+                        <!-- Display all comments that are already approved -->
                         {% for comment in comments %}
                         {% if comment.approved == True %}
                         <div class="border border-3 pt-2 pb-2">
@@ -90,6 +101,7 @@
                                 {{ comment.email }} 
                             </p>
                             <p class="profilecardtext">{{ comment.body }}</p>
+                            <!-- Button to Delete already approved comments -->
                             <a href="{% url 'delete' comment.id %}" class="btn">Delete</a>
                         </div>
                         {% endif %}
