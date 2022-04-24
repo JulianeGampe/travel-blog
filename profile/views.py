@@ -6,7 +6,9 @@ from django.contrib import messages
 
 
 def profile(request):
-
+    '''
+    View to create a new post from the frontend
+    '''
     if request.method == 'POST':
         post_form = PostForm(request.POST, request.FILES)
         if post_form.is_valid():
@@ -32,6 +34,9 @@ def profile(request):
 
 
 def approve(request, comment_id):
+    '''
+    View to approve a comment from the frontend
+    '''
     comment = get_object_or_404(Comment, id=comment_id)
     template = "profile/approve.html"
     context = {
