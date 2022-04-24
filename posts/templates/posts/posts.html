@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="container mb-5">
-    
+    <!-- Display for django contrib messages -->
     {% if messages %}
     {% for message in messages %}
     <div class="row">
@@ -17,6 +17,7 @@
     {% endfor %}
     {% endif %}
 
+    <!-- Drafts visible for superuser and blogger only -->
     {% if request.user.is_superuser or user.username|lower == 'mia_travels' %}
     <div class="row">
         <div class="col-md-8 mt-5 offset-md-2">
@@ -25,6 +26,7 @@
     </div>
     <div class="row">
         {% for post in posts %}
+            <!-- Display each post where the status is 'draft'-->
             {% if post.status == 0 %}
             <div class="col-11 offset-1 col-md-4 offset-sm-0 col-sm-6  mt-5">
                 <div class="card">
@@ -40,6 +42,7 @@
         {% endfor %}
     </div>
     {% endif %}
+    <!-- Published posts displayed for all users -->
     <div class="row">
         <div class="col-md-8 mt-5 offset-md-2">
             <h2>Latest Blogposts</h2>
@@ -47,24 +50,30 @@
     </div>
     <div class="row">
         {% for post in posts %}
+            <!-- Display each post where the status is 'published'-->
             {% if post.status == 1 %}
             <div class="col-11 offset-1 col-md-4 offset-sm-0 col-sm-6 mt-5">
                 <div class="card" id="postscard">
+                    <!-- If no image uploaded with post, the placeholder is displayed -->
                     {% if 'placeholder' in post.image.url %}
                     <img class="card-img-top postscardimage" src="https://res.cloudinary.com/dj9mjerfb/image/upload/v1650727697/placeholder_mia_izxddh.png" alt="Placeholder Image">
                     {% else %}
+                    <!-- Image uploaded for the post -->
                     <img class="card-img-top postscardimage" src="{{ post.image.url }}" alt="image for the post">
                     {% endif %}
                     <div class="card-body">
+                        <!-- Title for the post, if clicked links to the comments page with more details-->
                         <a href="{% url 'comments' post.slug %}" class="postscardtitlelink">
                             <h3 class="card-title postscardtitle" id="posttitle">{{ post.title }}</h3>
                         </a>
+                        <!-- More post details -->
                         <p class="card-text postscardtext">
                             By: {{ post.author }} <br>
                             Created: {{ post.created }} <br>
                             Update: {{ post.updated }} <br>
                             Likes: {{ post.number_of_likes }}
                         </p>  
+                        <!-- Edit and Delete button accessible for superuser and blogger only -->
                         {% if request.user.is_superuser or user.username|lower == 'mia_travels' %}
                         <a href="{% url 'edit_post' post.id %}" class="btn btn-primary">Edit Post</a>
                         <a href="{% url 'delete_post' post.id %}" class="btn btn-primary">Delete Post</a>
