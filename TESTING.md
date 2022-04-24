@@ -144,8 +144,12 @@ The website funcionalty with all user stories have been tested manually while lo
 ## Color Testing
 
 - All colors have been tested with a contrast checker. 
-  - Contrast test #201773 against #ffffff
-  ![Adobe Color Test](documentation/screenshots/colortesttwo.png)
+  - Contrast test #7EB6D9 against #000000. (main background color against font color)
+  ![Adobe Color Test Light Blue](documentation/screenshots/contrastcheck.png)
+  - Contrast test #D9C6B0 against #000000. (header and footer background color against font color)
+  ![Adobe Color Test Light Brown](documentation/screenshots/contrastchecksecondcolor.png)
+  - Contrast test #446EA6 against #FFFFFF. (button background color against font color)
+  ![Adobe Color Test Dark Blue](documentation/screenshots/contrastcheckthirdcolor.png)
 
 ## Validator Testing 
 
