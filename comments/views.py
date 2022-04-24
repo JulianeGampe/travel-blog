@@ -7,6 +7,9 @@ from django.contrib import messages
 
 
 def comments(request, slug):
+    '''
+    View to create a new comment
+    '''
     post = Post.objects.get(slug=slug)
     comments = post.comments.filter(approved=True).order_by("-created")
     new_comment = None
@@ -39,6 +42,9 @@ def comments(request, slug):
 
 
 def edit_comment(request, comment_id):
+    '''
+    View to edit an existing comment
+    '''
     comment = get_object_or_404(Comment, id=comment_id)
     edited_comment = None
     if request.method == 'POST':
@@ -61,6 +67,9 @@ def edit_comment(request, comment_id):
 
 
 def delete_comment(request, comment_id):
+    '''
+    View to delete a comment
+    '''
     comment = get_object_or_404(Comment, id=comment_id)
     template = "comments/comments_delete.html"
     context = {
