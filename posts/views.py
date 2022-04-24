@@ -34,7 +34,7 @@ def edit_post(request, post_id):
     template = "posts/posts_edit.html"
 
     if request.method == 'POST':
-        edit_form = PostEditForm(request.POST, instance=edited_post)
+        edit_form = PostEditForm(request.POST, request.FILES, instance=edited_post)
         if edit_form.is_valid():
             edited_post.updated = datetime.now()
             edited_post = edit_form.save(commit=False)
