@@ -159,7 +159,21 @@ The website funcionalty with all user stories have been tested manually while lo
 
 - HTML
   - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/)
-    - [aboutme](https://validator.w3.org/nu/.....)
+  - Screenshots of the HTML test can be found [here](documentation/testing/html/)
+    - [aboutme](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Faboutme%2F)
+    - [comments delete](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Fcomments%2Fdelete%2F141%2F)
+    - [comments edit](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Fcomments%2Fedit%2F140%2F)
+
+    - [home](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2F)
+    - [contact](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Fcontact%2F)
+    - [posts delete](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Fposts%2Fdelete_post%2F122%2F)
+    - [posts edit](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Fposts%2Fedit_post%2F116%2F)
+    - [posts](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Fposts%2F)
+    - [approve](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Fprofile%2Fapprove%2F142%2F)
+    - [profile](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Fprofile%2F)
+    - [logout](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Faccounts%2Flogout%2F)
+    - [login](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Faccounts%2Flogin%2F)
+    - [signup](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Faccounts%2Fsignup%2F)
 
 
 - CSS
