@@ -96,6 +96,20 @@ The website funcionalty with all user stories have been tested manually while lo
     - Already approved comments can be seen as well, with the option to delete.
       ![Instructions](documentation/screenshots/admintwo.png)
 
+### Javascript
+- JavaScript
+  - JavaScript was used for the time out function of django contrib messages.
+    - This was tested manually. The messages displayed dissappear automatically.
+    - The code for the message timeout function and template display has been taken from [Code Institute Django3blog](https://github.com/Code-Institute-Solutions/Django3blog/blob/master/12_final_deployment/templates/base.html)
+
+    ![Timeout](documentation/testing/js/jstimeoutfunction.png)
+
+  - JavaScript was used to initiate the TinyMCE editor. 
+    - This was tested manually as well. The editor works on the local and deployed site.
+    - The code template was found in the [Tiny Docs Quick Start](https://www.tiny.cloud/docs/quick-start/) 
+
+    ![TinyMCE](documentation/testing/js/jstinymceinit.png)
+
 ### Browser Compatibility
 
 - The page has been tested and works in different browsers.
@@ -183,6 +197,8 @@ The website funcionalty with all user stories have been tested manually while lo
 
 - JavaScript
   - No errors were found when passing through [JSHint](https://jshint.com/)
+  ![Timeout](documentation/testing/js/jstimeoutfunction.png)
+  ![TinyMCE](documentation/testing/js/jstinymceinit.png)
 
 - Accessibility
   - The page passes the accessibility test using lighthouse in devtools
