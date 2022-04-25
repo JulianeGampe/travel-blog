@@ -53,7 +53,7 @@
             <!-- Display each post where the status is 'published'-->
             {% if post.status == 1 %}
             <div class="col-11 offset-1 col-md-4 offset-sm-0 col-sm-6 mt-5">
-                <div class="card" id="postscard">
+                <div class="card">
                     <!-- If no image uploaded with post, the placeholder is displayed -->
                     {% if 'placeholder' in post.image.url %}
                     <img class="card-img-top postscardimage" src="https://res.cloudinary.com/dj9mjerfb/image/upload/v1650727697/placeholder_mia_izxddh.png" alt="Placeholder Image">
