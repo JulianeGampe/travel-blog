@@ -64,7 +64,7 @@
                     <div class="card-body">
                         <!-- Title for the post, if clicked links to the comments page with more details-->
                         <a href="{% url 'comments' post.slug %}" class="postscardtitlelink">
-                            <h3 class="card-title postscardtitle" id="posttitle">{{ post.title }}</h3>
+                            <h3 class="card-title postscardtitle posttitlelink">{{ post.title }}</h3>
                         </a>
                         <!-- More post details -->
                         <p class="card-text postscardtext">
