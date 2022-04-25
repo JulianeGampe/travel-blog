@@ -155,16 +155,15 @@ The website funcionalty with all user stories have been tested manually while lo
 
 - PEP8
   - No errors were returned from [PEP8online.com](http://pep8online.com/).
-    ![PEP8 validation](documentation/screenshots/pep8validation.png)
+  - Screenshots of the tests can be found [here](documentation/testing/pep8/)
 
 - HTML
   - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/)
-    - [Home page](https://validator.w3.org/nu/.....)
+    - [aboutme](https://validator.w3.org/nu/.....)
 
-      ![Html home check](documentation/screenshots/htmlcheckerhome.png)
 
 - CSS
-  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjulianegampe.github.io%2Fcat-sanctuary&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ftravelblogproject.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
       ![CSS validation](documentation/screenshots/cssvalidation.png)
 
