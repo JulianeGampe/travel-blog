@@ -304,7 +304,8 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 - This [YouTube Video](https://www.youtube.com/watch?v=1T6G7Znrbfg) from Dev Merazig has helped me with the use of cloudinary, especially with setting the source in the template to {{ post.image.url }}.
 - This [article](https://jszczerbinski.medium.com/django-web-app-and-images-cloudinary-straightforward-study-ae8b5bb03e37) from Jacek Szczerbiński has helped me to set up cloudinary for uploading images to the posts from the frontend. Especially by adding request.FILES in the profile view.
 - This [YouTube TinyMCE Django Tutorial](https://www.youtube.com/watch?v=l9VZlqCbiLk) has helped me with implementing the TinyMCE editor.
-- The [Django TinyMCE Documentation]() has helped me with using the TinyMCE widget in forms.py.
+- The [Django TinyMCE Documentation](https://django-tinymce.readthedocs.io/en/latest/usage.html#using-the-widget) has helped me with using the TinyMCE widget in forms.py.
+- The [Tiny Docs Quick Start](https://www.tiny.cloud/docs/quick-start/) has helped me with setting the Tinymce API key.
 - This [YouTube Django Message Framework Tutorial](https://www.youtube.com/watch?v=VIx3HD2gRWQ) has helped me set up the message notifications.
 - The code for the message timeout function and template display has been taken from [Code Institute Django3blog](https://github.com/Code-Institute-Solutions/Django3blog/blob/master/12_final_deployment/templates/base.html)
 
@@ -326,4 +327,5 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 
 ### Acknowledgements
 
-- I would like to thank...
+- I would like to thank my mentor Tim Nelson for his support, guidance and encouragement.
+- I would like to thank my friend Heike Lerner for testing the site from the user perspective and for her extensive feedback.
