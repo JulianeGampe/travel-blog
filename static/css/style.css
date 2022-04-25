@@ -32,8 +32,6 @@ footer,
     text-decoration: underline;
 }
 
-
-
 .btn {
     border: none;
 }
@@ -100,7 +98,7 @@ p {
 }
 
 /* posts page styling */
-#posttitle:hover {
+.posttitlelink:hover {
     text-decoration: underline;
 }
 
