@@ -179,7 +179,7 @@ The website funcionalty with all user stories have been tested manually while lo
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ftravelblogproject.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
-      ![CSS validation](documentation/screenshots/cssvalidation.png)
+      ![CSS validation](documentation/testing/css/cssvalidation.png)
 
 - JavaScript
   - No errors were found when passing through [JSHint](https://jshint.com/)
