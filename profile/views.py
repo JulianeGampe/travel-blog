@@ -3,6 +3,7 @@ from posts.models import Post
 from comments.models import Comment
 from profile.forms import PostForm
 from django.contrib import messages
+from django.conf import settings
 
 
 def profile(request):
@@ -29,6 +30,7 @@ def profile(request):
     context = {
         'post_form': post_form,
         'comments': comments,
+        'TINYMCE_API': settings.TINYMCE_API,
     }
     return render(request, template, context)
 
