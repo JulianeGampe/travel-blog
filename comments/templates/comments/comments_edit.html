@@ -19,16 +19,14 @@
             {% if edited_comment %}
                 <div>Your comment is awaiting approval</div>
             {% else %}
+            <!-- Edit comment heading -->
+            <h2>Please edit your comment here:</h2>
             <!-- Form to edit the comment -->
-            <form action="." method="POST">
+            <form method="POST">
                 {% csrf_token %}
-                <h2>Please edit your comment here:</h2>
-                <form method="POST">
-                    {% csrf_token %}
-                    {{edit_form|crispy}}
-                    <button class="btn btn-signup btn-md mt-2" type="submit">Edit Comment</button>
-                    <a href="{% url 'posts' %}">Cancel</a></p>
-                </form>
+                {{edit_form|crispy}}
+                <button class="btn btn-signup btn-md mt-2" type="submit">Edit Comment</button>
+                <a href="{% url 'posts' %}">Cancel</a></p>
             </form>
             {% endif %}
         </div>
