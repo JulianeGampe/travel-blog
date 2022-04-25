@@ -6,6 +6,7 @@ from django.http import HttpResponseRedirect
 from .forms import PostEditForm
 from datetime import datetime
 from django.contrib import messages
+from django.conf import settings
 
 
 def posts(request):
@@ -55,7 +56,8 @@ def edit_post(request, post_id):
 
     context = {
         'edit_form': edit_form,
-        'edited_post': edited_post
+        'edited_post': edited_post,
+        'TINYMCE_API': settings.TINYMCE_API,
     }
     return render(request, template, context)
 
