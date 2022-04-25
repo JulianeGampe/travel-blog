@@ -2,6 +2,11 @@
 {% load crispy_forms_tags %}
 
 {% block head %}
+<script>
+    tinymce.init({
+      selector: '#tinymce'
+    });
+</script>
 {{ post_form.media }}
 {% endblock %}
 
@@ -112,14 +117,5 @@
         </div>
     </div>
 </div>
-
-
-    <script>
-      tinymce.init({
-        selector: '#tinymce'
-      });
-    </script>
-
-
 
 {% endblock content %}
