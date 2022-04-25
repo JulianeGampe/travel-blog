@@ -35,6 +35,7 @@ ALLOWED_HOSTS = ['travelblogproject.herokuapp.com', 'localhost']
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
+TINYMCE_API = os.environ.get('TINYMCE_API')
 
 # Application definition
 
