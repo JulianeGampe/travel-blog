@@ -4,6 +4,7 @@ from comments.models import Comment
 from comments.forms import CommentForm
 from django.http import HttpResponseRedirect
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 
 def comments(request, slug):
@@ -66,6 +67,7 @@ def edit_comment(request, comment_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_comment(request, comment_id):
     '''
     View to delete a comment
@@ -75,7 +77,9 @@ def delete_comment(request, comment_id):
     context = {
         'comment': comment
     }
-
+    if request.user != comment.name:
+        messages.error(request, 'Access denied.')
+        return redirect('posts')
     if request.method == "POST":
         comment.delete()
         messages.success(request, 'You have deleted the comment.')
