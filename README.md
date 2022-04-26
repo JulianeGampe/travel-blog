@@ -308,6 +308,7 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 - The [Tiny Docs Quick Start](https://www.tiny.cloud/docs/quick-start/) has helped me with setting the Tinymce API key.
 - This [YouTube Django Message Framework Tutorial](https://www.youtube.com/watch?v=VIx3HD2gRWQ) has helped me set up the message notifications.
 - The code for the message timeout function and template display has been taken from [Code Institute Django3blog](https://github.com/Code-Institute-Solutions/Django3blog/blob/master/12_final_deployment/templates/base.html)
+- This article from [Stackoverflow](https://stackoverflow.com/questions/1053902/how-to-convert-a-title-to-a-url-slug-in-jquery/1054862#1054862) was used to create the code to convert the post title to the slug-format on the frontend.
 
 ### Media 
 
