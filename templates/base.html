@@ -85,10 +85,13 @@
 
     <!-- timeout function for django contrib messages -->
     <script>
+        /* jshint esversion: 8 */
         setTimeout(function() {
             let messages = document.getElementById("msg");
-            let alert = new bootstrap.Alert(messages);
-            alert.close();
+            if (messages) {
+                let alert = new bootstrap.Alert(messages);
+                alert.close();
+            }
         }, 3000);
     </script>
 
