@@ -34,6 +34,20 @@
 
 {% endblock content %}
 {% block js %}
+<script>
+    // convert Post title to slug-format on front-end
+    /* jshint esversion: 8 */
+    let title = document.getElementById("id_title");
+    let slug = document.getElementById("id_slug");
+    title?.addEventListener("keyup", convertToSlug);
+    slug?.addEventListener("keyup", convertToSlug);
+
+    function convertToSlug() {
+      slug.value = title.value.toLowerCase()
+                 .replace(/ /g, '-')
+                 .replace(/[^\w-]+/g, '');
+    }
+</script>
 <script src="https://cdn.tiny.cloud/1/{{ TINYMCE_API }}/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 <script>
     tinymce.init({
