@@ -24,7 +24,7 @@
                     </div>
                     <div class="card-text">
                         <!-- Post content -->
-                        <p>{{ post.content|safe }}</p>
+                        {{ post.content|safe }}
                         {% if 'placeholder' in post.image.url %}
                             <!-- If no image was uploaded with the post, the placeholder is displayed -->
                             <img src="https://res.cloudinary.com/dj9mjerfb/image/upload/v1650727697/placeholder_mia_izxddh.png" alt="Placeholder Image" class="commentcardimage">
