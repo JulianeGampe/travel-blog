@@ -23,7 +23,7 @@ For the blogger themselves an admin page is accessible after login, where the bl
 - As a user/site owner I can see a message after I have left a comment/created a post on the frontend so that I know that the comment/post was successfully generated.
 
 - As a site owner I can create, read and update my posts so that I can manage my travel blog appropriately.
-- As a site owner I can create, update and delete my posts from the frontend so that I do not need use the admin tool.
+- As a site owner I can create, update and delete my posts from the frontend so that I do not need to use the admin tool.
 - As a site owner I can create drafts so that I don't have to publish the post immediately and can finish it later.
 - As a site owner I can approve or disapprove comments so that I can filter out questionable comments.
 - As a site owner I can approve comments from the frontend so that I don't have to use the admin tool.
@@ -45,7 +45,7 @@ The darker blue color #446EA6 has been used as the background color for the hove
 
 ### Typography 
 
-Google Fonts has been used to find the font, that is displayed on the website. [Kalam](https://fonts.google.com/specimen/Kalam?category=Handwriting#glyphs) is a handwriting font family. As described on Google Fonts the fonts have been optimized for text usage on screen. The design feels very personal and the letters appear similar as the letters used in everyday handwriting. That is why is font has been chosen - the feeling of reading a personal travel journal should be conveyed to the reader. 
+Google Fonts has been used to find the font, that is displayed on the website. [Kalam](https://fonts.google.com/specimen/Kalam?category=Handwriting#glyphs) is a handwriting font family. As described on Google Fonts the fonts have been optimized for text usage on screen. The design feels very personal and the letters appear similar as the letters used in everyday handwriting. That is why this font has been chosen - the feeling of reading a personal travel journal should be conveyed to the reader. 
 
 To provide visual cues icons from [Font Awesome](https://fontawesome.com/) have been used in the footer to point to the social  media websites. 
 
@@ -179,11 +179,11 @@ Wireframes created with Balsamiq were used to plan the layout of the website.
   ```python
     is_admin: models.BooleanField(default=False) 
   ```
-  an using the following in the templates
+  and using the following in the templates
   ```html
     {% if user.is_admin %}
   ```
-  - This would provide an easier way give to allow users admin access in case the blog expands.
+  - This would provide an easier way to give users admin access in case the blog expands with several people creating posts.
 
 ## Database Models
 
@@ -262,6 +262,7 @@ Due to the length of testing, you can see all tests in the [TESTING.md](TESTING.
       1. DATABASE_URL is the connection to the Postgres database and is added to the project
       2. add the SECRET_KEY from the django project
       3. add the CLOUDINARY_URL
+      4. add the TINYMCE_API key
 
   - Link the Heroku app to the repository in the _Deploy_ tab
 
@@ -296,7 +297,7 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 You must install the required packages for this application, using the command:
 - `pip3 install -r requirements.txt`
 
-You must set the the keys for your environment variables in env.py:
+You must set the keys for your environment variables in env.py:
 - os.environ["DATABASE_URL"] 
 - os.environ["SECRET_KEY"]
 - os.environ["CLOUDINARY_URL"]
@@ -310,8 +311,8 @@ You must set the the keys for your environment variables in env.py:
 - [Djangocentral](https://djangocentral.com/creating-comments-system-with-django/) has been used as a help for creating and approving comments with Django.
 - This post from [Stackoverflow](https://stackoverflow.com/questions/65733442/in-django-how-to-add-username-to-a-model-automatically-when-the-form-is-submit) showed me how to set the name field from the Comments Model automatically to the username of the logged in user.
 - This [YouTube Video](https://www.youtube.com/watch?v=3VBHWLFza4s) from CodingEntrepreneurs has shown me how to set up a delete confirmation, for example in the comment_delete view.
-- This [YouTube Video](https://www.youtube.com/watch?v=1T6G7Znrbfg) from Dev Merazig has helped me with the use of cloudinary, especially with setting the source in the template to {{ post.image.url }}.
-- This [article](https://jszczerbinski.medium.com/django-web-app-and-images-cloudinary-straightforward-study-ae8b5bb03e37) from Jacek Szczerbiński has helped me to set up cloudinary for uploading images to the posts from the frontend. Especially by adding request.FILES in the profile view.
+- This [YouTube Video](https://www.youtube.com/watch?v=1T6G7Znrbfg) from Dev Merazig has helped me with the use of Cloudinary, especially with setting the source in the template to {{ post.image.url }}.
+- This [article](https://jszczerbinski.medium.com/django-web-app-and-images-cloudinary-straightforward-study-ae8b5bb03e37) from Jacek Szczerbiński has helped me to set up Cloudinary for uploading images to the posts from the frontend. Especially by adding request.FILES in the profile view.
 - This [YouTube TinyMCE Django Tutorial](https://www.youtube.com/watch?v=l9VZlqCbiLk) has helped me with implementing the TinyMCE editor.
 - The [Django TinyMCE Documentation](https://django-tinymce.readthedocs.io/en/latest/usage.html#using-the-widget) has helped me with using the TinyMCE widget in forms.py.
 - The [Tiny Docs Quick Start](https://www.tiny.cloud/docs/quick-start/) has helped me with setting the Tinymce API key.
@@ -327,7 +328,7 @@ You must set the the keys for your environment variables in env.py:
   - [Kalam](https://fonts.google.com/specimen/Kalam?category=Handwriting#glyphs)
 - The icons for the footer were taken from [Font Awesome](https://fontawesome.com/)
   - [Instagram Icon](https://fontawesome.com/v5/icons/instagram-square?style=brands&s=brands)
-  - [YouTube Icon](https://fontawesome.com/v5/icons/twitter?style=brands&s=brands)
+  - [YouTube Icon](https://fontawesome.com/v5.15/icons/youtube?style=brands)
   - [Twitter Icon](https://fontawesome.com/v5/icons/twitter?style=brands&s=brands)
 - [Balsamiq](https://balsamiq.com/wireframes/) was used to create the wireframes.
 - [Am I responsive](http://ami.responsivedesign.is/) has been used to create the responsive mockup of the project
