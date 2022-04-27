@@ -49,6 +49,9 @@ def edit_comment(request, comment_id):
     '''
     comment = get_object_or_404(Comment, id=comment_id)
     edited_comment = None
+    if request.user.username != comment.name:
+        messages.error(request, 'Access denied.')
+        return redirect('posts')
     if request.method == 'POST':
         edit_form = CommentForm(request.POST, instance=comment)
         if edit_form.is_valid():
