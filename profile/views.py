@@ -4,6 +4,7 @@ from comments.models import Comment
 from profile.forms import PostForm
 from django.contrib import messages
 from django.conf import settings
+from django.contrib.auth.decorators import login_required
 
 
 def profile(request):
@@ -35,6 +36,7 @@ def profile(request):
     return render(request, template, context)
 
 
+@login_required
 def approve(request, comment_id):
     '''
     View to approve a comment from the frontend
@@ -45,6 +47,10 @@ def approve(request, comment_id):
         'comment': comment
     }
 
+    if request.user.username != 'mia_travels' and \
+            not request.user.is_superuser:
+        messages.error(request, 'Access denied.')
+        return redirect('posts')
     if request.method == "POST":
         comment.approved = True
         comment.save()
