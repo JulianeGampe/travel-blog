@@ -110,6 +110,12 @@ The website funcionalty with all user stories have been tested manually while lo
 
     ![TinyMCE](documentation/testing/js/jstinymceinit.png)
 
+  - JavaScript was used to convert the post title into the slug format when creating posts on the frontend.
+    - This was tested manually. The slug field is automatically populated with the post title.
+    - This article from [Stackoverflow](https://stackoverflow.com/questions/1053902/how-to-convert-a-title-to-a-url-slug-in-jquery/1054862#1054862) was used to create the code.
+
+    ![Slug](documentation/testing/js/jsslug.png)
+
 ### Browser Compatibility
 
 - The page has been tested and works in different browsers.
@@ -204,6 +210,7 @@ The website funcionalty with all user stories have been tested manually while lo
   - No errors were found when passing through [JSHint](https://jshint.com/)
   ![Timeout](documentation/testing/js/jstimeoutfunction.png)
   ![TinyMCE](documentation/testing/js/jstinymceinit.png)
+  ![TinyMCE](documentation/testing/js/jsslug.png)
 
 - Accessibility
   - The page passes the accessibility test using lighthouse in devtools
