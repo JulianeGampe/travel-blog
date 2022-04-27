@@ -7,10 +7,15 @@ from django.conf import settings
 from django.contrib.auth.decorators import login_required
 
 
+@login_required
 def profile(request):
     '''
     View to create a new post from the frontend
     '''
+    if request.user.username != 'mia_travels' and \
+            not request.user.is_superuser:
+        messages.error(request, 'Access denied.')
+        return redirect('posts')
     if request.method == 'POST':
         post_form = PostForm(request.POST, request.FILES)
         if post_form.is_valid():
