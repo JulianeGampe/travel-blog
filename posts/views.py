@@ -34,6 +34,7 @@ def likes(request, slug):
     return HttpResponseRedirect(reverse('comments', args=[slug]))
 
 
+@login_required
 def edit_post(request, post_id):
     '''
     View to edit post from the frontend
@@ -67,6 +68,7 @@ def edit_post(request, post_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_post(request, post_id):
     '''
     View to delete post from the frontend
@@ -77,6 +79,10 @@ def delete_post(request, post_id):
         'posts_delete': posts_delete
     }
 
+    if request.user.username != 'mia_travels' and \
+            not request.user.is_superuser:
+        messages.error(request, 'Access denied.')
+        return redirect('posts')
     if request.method == "POST":
         posts_delete.delete()
         messages.success(request, 'You have deleted the post.')
