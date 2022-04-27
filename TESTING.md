@@ -265,34 +265,125 @@ The website funcionalty with all user stories have been tested manually while lo
         ![urls.py](documentation/testing/pep8/profile/pep8profileurls.png)
 
         views.py
-        
+
         ![views.py](documentation/testing/pep8/profile/pep8profileviews.png)
 
     </details>
 
 - HTML
 
-<details>
-<summary>Click to expand to view the html testing</summary>
-
   - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/)
-  - Screenshots of the HTML test can be found [here](documentation/testing/html/)
-    - [aboutme](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Faboutme%2F)
-    - [comments delete](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Fcomments%2Fdelete%2F141%2F)
-    - [comments edit](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Fcomments%2Fedit%2F140%2F)
-    - [comments](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Fcomments%2Farena-di-verona%2F)
-    - [home](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2F)
-    - [contact](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Fcontact%2F)
-    - [posts delete](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Fposts%2Fdelete_post%2F122%2F)
-    - [posts edit](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Fposts%2Fedit_post%2F116%2F)
-    - [posts](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Fposts%2F)
-    - [approve](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Fprofile%2Fapprove%2F142%2F)
-    - [profile](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Fprofile%2F)
-    - [logout](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Faccounts%2Flogout%2F)
-    - [login](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Faccounts%2Flogin%2F)
-    - [signup](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Faccounts%2Fsignup%2F)
 
-</details>
+    <details>
+    <summary>Click to expand to view the HTML testing</summary>
+
+      - About Me 
+
+        [aboutme W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Faboutme%2F)
+
+        ![aboutme](documentation/testing/html/aboutme/htmlaboutme.png)
+      
+
+      - Comments 
+        
+        comments.html
+
+        [comments W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Fcomments%2Farena-di-verona%2F)
+
+        ![comments](documentation/testing/html/comments/htmlcomments.png)
+        
+
+        comments_delete.html
+
+        Propper authentication needed to access this page.
+
+        ![comments_delete](documentation/testing/html/comments/htmlcommentsdelete.png)
+        
+
+        comments_edit.html
+
+        Propper authentication needed to access this page.
+
+        ![comments edit](documentation/testing/html/comments/htmlcommentsedit.png)
+        
+      
+      - Home
+
+        [home W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2F)
+
+        ![homepage](documentation/testing/html/home/htmlhome.png)
+        
+
+      - Contact
+
+        [contact W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Fcontact%2F)
+
+        ![contact](documentation/testing/html/contact/htmlcontact.png)
+      
+
+      - Posts
+
+        posts_delete.html
+        
+        Propper authentication needed to access this page.
+
+        ![posts_delete](documentation/testing/html/posts/htmlpostsdelete.png)
+
+
+        posts_edit.html
+
+        Propper authentication needed to access this page.
+
+        ![posts_edit.html](documentation/testing/html/posts/htmlpostsedit.png)
+
+        
+        posts.html
+
+        [posts W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Fposts%2F)
+
+        ![posts](documentation/testing/html/posts/htmlposts.png)
+        
+
+      - Profile
+
+        approve.html
+
+        Propper authentication needed to access this page.
+
+        ![approve](documentation/testing/html/profile/htmlapprove.png)
+
+
+        profile.html
+
+        Propper authentication needed to access this page.
+
+        ![profile](documentation/testing/html/profile/htmlprofile.png)
+
+
+      - Account
+
+        login.html
+
+        [login W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Faccounts%2Flogin%2F)
+
+        ![login](documentation/testing/html/account/htmllogin.png)
+
+
+        signup.html
+
+        [signup W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Faccounts%2Fsignup%2F)
+
+        ![signup](documentation/testing/html/account/htmlsignup.png)
+
+
+        logout.html
+
+        [logout W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogproject.herokuapp.com%2Faccounts%2Flogout%2F)  
+
+        ![logout](documentation/testing/html/account/htmllogout.png)
+
+
+    </details>
 
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ftravelblogproject.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
