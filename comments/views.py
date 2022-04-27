@@ -42,6 +42,7 @@ def comments(request, slug):
     return render(request, template, context)
 
 
+@login_required
 def edit_comment(request, comment_id):
     '''
     View to edit an existing comment
@@ -77,7 +78,7 @@ def delete_comment(request, comment_id):
     context = {
         'comment': comment
     }
-    if request.user != comment.name and \
+    if request.user.username != comment.name and \
         request.user.username != 'mia_travels' and \
             not request.user.is_superuser:
         messages.error(request, 'Access denied.')
