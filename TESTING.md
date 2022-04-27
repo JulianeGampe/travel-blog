@@ -174,8 +174,101 @@ The website funcionalty with all user stories have been tested manually while lo
 ## Validator Testing 
 
 - PEP8
+
   - No errors were returned from [PEP8online.com](http://pep8online.com/).
-  - Screenshots of the tests can be found [here](documentation/testing/pep8/)
+
+    <details>
+    <summary>Click to expand to view the PEP8 testing</summary>
+ 
+      - aboutme app
+
+        urls.py
+        
+        ![urls.py](documentation/testing/pep8/aboutme/pep8aboutmeurls.png)
+
+        views.py
+
+        ![views.py](documentation/testing/pep8/aboutme/pep8aboutmeviews.png)
+
+      - comments app
+
+        admin.py
+
+        ![admin.py](documentation/testing/pep8/comments/pep8commentsadmin.png)
+
+        forms.py
+
+        ![forms.py](documentation/testing/pep8/comments/pep8commentsforms.png)
+
+        models.py
+
+        ![models.py](documentation/testing/pep8/comments/pep8commentsmodels.png)
+
+        urls.py
+
+        ![urls.py](documentation/testing/pep8/comments/pep8commentsurls.png)
+
+        views.py
+
+        ![views.py](documentation/testing/pep8/comments/pep8commentsviews.png)
+
+      - contact app
+
+        urls.py
+
+        ![urls.py](documentation/testing/pep8/contact/pep8contacturls.png)
+
+        views.py
+
+        ![views.py](documentation/testing/pep8/contact/pep8contactviews.png)
+
+      - home app
+
+        urls.py
+
+        ![urls.py](documentation/testing/pep8/home/pep8homeurls.png)
+
+        views.py
+
+        ![views.py](documentation/testing/pep8/home/pep8homeviews.png)
+
+      - posts app
+
+        admin.py
+
+        ![admin.py](documentation/testing/pep8/posts/pep8postsadmin.png)
+
+        forms.py
+
+        ![forms.py](documentation/testing/pep8/posts/pep8postsforms.png)
+
+        models.py
+
+        ![models.py](documentation/testing/pep8/posts/pep8postsmodels.png)
+
+        urls.py
+
+        ![urls.py](documentation/testing/pep8/posts/pep8postsurls.png)
+
+        views.py
+
+        ![views.py](documentation/testing/pep8/posts/pep8postsviews.png)
+
+      - profile app
+
+        forms.py
+
+        ![forms.py](documentation/testing/pep8/profile/pep8profileforms.png)
+
+        urls.py
+
+        ![urls.py](documentation/testing/pep8/profile/pep8profileurls.png)
+
+        views.py
+        
+        ![views.py](documentation/testing/pep8/profile/pep8profileviews.png)
+
+    </details>
 
 - HTML
 
