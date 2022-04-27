@@ -225,7 +225,7 @@ The following bugs were tracked and fixed using the GitHub Issues tracker with t
 - **Approval button for comments on frontend does not work** - [#6](https://github.com/JulianeGampe/travel-blog/issues/25)
 - **ConnectionRefusedError at /accounts/signup/** - [#7](https://github.com/JulianeGampe/travel-blog/issues/26)
 - **Image upload not working from Frontend** - [#8](https://github.com/JulianeGampe/travel-blog/issues/27)
-
+- **Uncaught TypeError: Cannot read properties of null** [#9](https://github.com/JulianeGampe/travel-blog/issues/29)
 
 ### Remaining Bugs
 
