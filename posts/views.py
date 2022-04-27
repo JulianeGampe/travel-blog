@@ -7,6 +7,7 @@ from .forms import PostEditForm
 from datetime import datetime
 from django.contrib import messages
 from django.conf import settings
+from django.contrib.auth.decorators import login_required
 
 
 def posts(request):
@@ -40,6 +41,10 @@ def edit_post(request, post_id):
     edited_post = get_object_or_404(Post, id=post_id)
     template = "posts/posts_edit.html"
 
+    if request.user.username != 'mia_travels' and \
+            not request.user.is_superuser:
+        messages.error(request, 'Access denied.')
+        return redirect('posts')
     if request.method == 'POST':
         edit_form = PostEditForm(
             request.POST,
