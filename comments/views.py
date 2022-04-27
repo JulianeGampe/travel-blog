@@ -77,7 +77,9 @@ def delete_comment(request, comment_id):
     context = {
         'comment': comment
     }
-    if request.user != comment.name:
+    if request.user != comment.name and \
+        request.user.username != 'mia_travels' and \
+            not request.user.is_superuser:
         messages.error(request, 'Access denied.')
         return redirect('posts')
     if request.method == "POST":
