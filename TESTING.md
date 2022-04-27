@@ -4,7 +4,7 @@
 
 ### Testing User Stories
 
-The website funcionalty with all user stories have been tested manually while logged in as testusers, site owner/admin and while not logged in. Additional tests from the user perspective have been made by a friend who created a user account for themselves. 
+The website functionality with all user stories has been tested manually while logged in as testusers, site owner/admin and while not logged in. Additional tests from the user perspective have been made by a friend who created a user account for themselves. 
 
 1. As a user I can see the homepage so that I know at first glance what the website is about.
     ![Instructions](documentation/screenshots/homepage.png)
@@ -41,7 +41,7 @@ The website funcionalty with all user stories have been tested manually while lo
     - It is not possible to delete comments of other users.
       ![Instructions](documentation/screenshots/commentsedittest.png)
       ![Instructions](documentation/screenshots/commentsdeletetest.png) 
-9. As a user I can like a post so that can show if I liked the content of the post.
+9. As a user I can like a post so that I can show if I liked the content of the post.
     - Liking posts was tested with testaccounts.
     - Liking a post is only possible when logged in.
       - Post Detail not logged in:
@@ -267,6 +267,12 @@ The website funcionalty with all user stories have been tested manually while lo
         views.py
 
         ![views.py](documentation/testing/pep8/profile/pep8profileviews.png)
+
+      - main app travelblog
+
+        urls.py
+
+        ![urls.py](documentation/testing/pep8/travelblog/pep8travelblogurls.png)
 
     </details>
 
