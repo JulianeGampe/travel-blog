@@ -293,6 +293,15 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/JulianeGampe/travel-blog)
 
+You must install the required packages for this application, using the command:
+- `pip3 install -r requirements.txt`
+
+You must set the the keys for your environment variables in env.py:
+- os.environ["DATABASE_URL"] 
+- os.environ["SECRET_KEY"]
+- os.environ["CLOUDINARY_URL"]
+- os.environ["TINYMCE_API"]
+
 ## Credits 
 
 ### Content
